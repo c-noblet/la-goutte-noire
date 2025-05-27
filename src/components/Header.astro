@@ -1,6 +1,6 @@
 ---
 import { menuMain } from "~/data/menus.js";
-
+import { Navigation } from './ui/navigation'
 const rmTrailingSlash = (path: string): string => {
   return path.endsWith("/") && path.length > 1 
     ? path.slice(0, path.length - 1) 
@@ -14,7 +14,7 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 	<div class="container py-6">
 		<nav class="flex items-center justify-between" aria-label="Global">
 			<a href="/" class="-m-1.5 p-1.5">
-				<p class="font-bold text-4xl text-brand-green">Astro<span class="text-brand-red bg-brand-red/5 px-3 ml-1 rounded-lg">Pie</span></p>
+				<p class="font-bold text-4xl text-brand-green">La <span class="text-brand-red bg-brand-red/5 px-3 ml-1 rounded-lg">Goutte Noire</span></p>
 			</a>
 			<div class="flex lg:hidden">
 				<button
@@ -39,7 +39,10 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 					</svg>
 				</button>
 			</div>
-			<div class="hidden lg:flex lg:gap-x-12 lg:items-center">
+			<div class="hidden lg:block">
+				<Navigation client:load />
+			</div>
+			<!-- <div class="hidden lg:flex lg:gap-x-12 lg:items-center">
 				{
 					menuMain.map((item) => (
 						<a
@@ -50,7 +53,7 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 						</a>
 					))
 				}
-			</div>
+			</div> -->
 		</nav>
 		<div class="lg:hidden" x-ref="dialog" x-show="open" x-cloak aria-modal="true">
 			<div
@@ -66,7 +69,7 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 			>
 				<div class="flex items-center justify-between">
 					<a href="/" class="-m-1.5 p-1.5">
-						<p class="font-bold text-4xl text-brand-green">Astro<span class="text-brand-red">Pie</span></p>
+						<p class="font-bold text-4xl text-brand-green">La<span class="text-brand-red">Goutte Noire</span></p>
 					</a>
 					<button type="button" class="-m-2.5 p-2.5 text-brand-red" @click="open = false">
 						<span class="sr-only">Close menu</span>

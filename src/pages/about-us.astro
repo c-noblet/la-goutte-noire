@@ -10,25 +10,24 @@ import Article from "~/components/Article.astro";
 
 // Images
 import PizzaHero from "~/assets/images/pizza-hero.png";
+import { phone } from "~/data/config";
 ---
 
 <Layout>
 	<Section class:list={"bg-white"}>
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
-				<Badge title="il ristorante italiana" />
-				<h1 class="font-black">Real Italian food in a real Italian restaurant...</h1>
+				<Badge title="Une restauration traditionnelle et gastronomique" />
+				<h1 class="font-black">Une authentique cuisine italienne dans un véritable restaurant italien...</h1>
 
 				<p>
-					Experience the taste of Italy with our authentic dishes made from the finest ingredients. Indulge in
-					our wide variety of pizzas, pastas, and desserts, all crafted with love and tradition. Whether
-					you're dining in or taking out, we promise a memorable culinary experience.
+					Découvrez le goût de l'Italie avec nos plats authentiques préparés à partir des meilleurs ingrédients. Savourez notre grande variété de pizzas, pâtes et desserts, tous préparés avec amour et tradition. Que vous dîniez sur place ou emportiez votre repas, nous vous promettons une expérience culinaire mémorable.
 				</p>
 
-				<span class="text-brand-green font-medium">✔ We also deliver</span>
+				<span class="text-brand-green font-medium">✔ Plats à emporter</span>
 
 				<div class="mt-8 flex items-center gap-x-8">
-					<Button url="/book">Book now</Button>
+					<Button url={phone.href}>Réserver</Button>
 					<ButtonCallUs />
 				</div>
 			</div>
@@ -48,40 +47,32 @@ import PizzaHero from "~/assets/images/pizza-hero.png";
 
 	<Section class:list={'bg-white'}>
 		<Article>
-			<h2>Welcome to AstroPie</h2>
+			<h2>Bienvenue à La Goutte Noire</h2>
 			<p>
-				Nestled in the heart of the city, <strong>AstroPie</strong> offers an authentic Italian dining experience
-				like no other. From the moment you step through our doors, you'll be transported to the vibrant streets of
-				Italy, where good food and great company are at the center of life.
+				Niché au cœur de la ville, <strong>La Goutte Noire</strong> offre une expérience culinaire italienne authentique comme nulle autre. Dès que vous franchissez nos portes, vous êtes transporté dans les rues animées d'Italie, où la bonne nourriture et la convivialité sont au centre de la vie.
 			</p>
 
-			<h3>Our Story</h3>
+			<h3>Notre Histoire</h3>
 			<p>
-				Founded in <em>1998</em>, our family-owned restaurant has always been a labor of love. Inspired by the
-				recipes passed down through generations, we bring the <u>rich culinary heritage</u> of Italy to your plate.
-				Every dish tells a story, and every meal is a celebration of flavor.
+				Fondé en <em>1998</em>, notre restaurant familial a toujours été une affaire de passion. Inspirés par les recettes transmises de génération en génération, nous apportons le <u>riche patrimoine culinaire</u> de l'Italie dans votre assiette. Chaque plat raconte une histoire, et chaque repas est une célébration de saveurs.
 			</p>
 
-			<h3>Our Philosophy</h3>
-			<blockquote>"The secret ingredient is always love."</blockquote>
+			<h3>Notre Philosophie</h3>
+			<blockquote>"L'ingrédient secret est toujours l'amour."</blockquote>
 			<p>
-				At AstroPie, we believe in the simple joy of fresh ingredients, time-honored techniques, and a
-				passion for creating memorable meals. From our hand-rolled pasta to our wood-fired pizzas, every bite is
-				crafted with care.
+				À La Goutte Noire, nous croyons au simple plaisir des ingrédients frais, des techniques éprouvées, et à une passion pour créer des repas mémorables. De nos pâtes roulées à la main à nos pizzas cuites au feu de bois, chaque bouchée est préparée avec soin.
 			</p>
 
-			<h4>What Makes Us Special?</h4>
+			<h4>Ce qui nous rend spéciaux</h4>
 			<ul>
-				<li><strong>Authenticity:</strong> Traditional recipes, just like Nonna used to make.</li>
-				<li><strong>Fresh Ingredients:</strong> Locally sourced produce and imported Italian staples.</li>
-				<li><strong>Warm Atmosphere:</strong> A place where everyone feels like family.</li>
+				<li><strong>Authenticité :</strong> Des recettes traditionnelles, comme les préparait Mamie.</li>
+				<li><strong>Ingrédients Frais :</strong> Des produits locaux et des essentiels italiens importés.</li>
+				<li><strong>Ambiance Chaleureuse :</strong> Un lieu où tout le monde se sent comme en famille.</li>
 			</ul>
 
-			<h3>Join Us</h3>
+			<h3>Rejoignez-nous</h3>
 			<p>
-				Whether you're celebrating a special occasion or simply indulging in the pleasures of Italian cuisine, <strong
-					>AstroPie</strong
-				> is the perfect destination. <em>Come for the food, stay for the memories.</em>
+				Que vous célébriez une occasion spéciale ou que vous vous abandonniez simplement aux plaisirs de la cuisine italienne, <strong>La Goutte Noire</strong> est la destination parfaite. <em>Venez pour la nourriture, restez pour les souvenirs.</em>
 			</p>
 		</Article>
 	</Section>

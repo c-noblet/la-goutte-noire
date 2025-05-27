@@ -12,7 +12,7 @@ const siteLangFormat = siteLang.replace("_", "-");
 			<ul id="plate-nav" class="px-2.5 py-3 swiper-wrapper">
 				{
 					plates.map((plate) => (
-						<li class="swiper-slide !w-auto last:mr-5">
+						<li class="swiper-slide inline-block !w-auto last:mr-5">
 							<a
 								href={`#${plate.data.slug}`}
 								class="rounded-full px-2 py-1 transition font-medium select-none"

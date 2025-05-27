@@ -1,0 +1,125 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import Section from "~/components/Section.astro";
+import Hero from "~/components/Hero.astro";
+import { Picture } from "astro:assets";
+import Badge from "~/components/Badge.astro";
+import Button from "~/components/Button.astro";
+import ButtonCallUs from "~/components/ButtonCallUs.astro";
+import Article from "~/components/Article.astro";
+import Menu from "~/components/Menu.astro";
+
+// Images
+import HeroImage from "~/assets/images/fish.png";
+import { phone } from "~/data/config";
+import { getCollection } from "astro:content";
+
+// Get plates from collection if available
+const plates = await getCollection("plates");
+---
+
+<Layout title="Plats à emporter" pageTitle="Plats à emporter" description="Découvrez notre sélection de plats à emporter">
+	<Section class:list={"bg-white"}>
+		<Hero>
+			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
+				<Badge title="À emporter" />
+				<h1 class="font-black">Savourez nos plats dans le confort de votre foyer</h1>
+
+				<p>
+					La Goutte Noire vous propose une sélection de plats à emporter, préparés avec soin par notre chef. Des options savoureuses pour tous les goûts, prêtes à être dégustées chez vous.
+				</p>
+
+				<span class="text-brand-green font-medium">✔ Commandez par téléphone</span>
+
+				<div class="mt-8 flex items-center gap-x-8">
+					<Button url={phone.href}>Commander</Button>
+					<ButtonCallUs />
+				</div>
+			</div>
+			<div slot="hero-content-right">
+				<Picture
+					class:list={"mx-auto"}
+					src={HeroImage}
+					height={600}
+					formats={["avif", "webp"]}
+					alt="Plats à emporter"
+					loading={"eager"}
+					fetchpriority={"high"}
+				/>
+			</div>
+		</Hero>
+	</Section>
+
+	{plates.length > 0 && (
+		<Section class:list={"bg-white"}>
+			<Menu plates={plates} />
+		</Section>
+	)}
+
+	<Section class:list={'bg-white'}>
+		<Article>
+			<h2>Nos plats à emporter</h2>
+			<p>
+				<strong>La Goutte Noire</strong> vous propose une sélection variée de plats à emporter, préparés avec les mêmes exigences de qualité que ceux servis dans notre restaurant. Une solution idéale pour profiter de notre cuisine sans sortir de chez vous.
+			</p>
+
+			<h3>Comment commander ?</h3>
+			<ol>
+				<li><strong>Par téléphone :</strong> Appelez-nous au {phone.label} pour passer votre commande</li>
+				<li><strong>Délai :</strong> Commandez au moins 2 heures à l'avance pour les plats du jour</li>
+				<li><strong>Retrait :</strong> Venez chercher votre commande à l'heure convenue</li>
+				<li><strong>Paiement :</strong> Réglez sur place (espèces, carte bancaire)</li>
+			</ol>
+
+			<h3>Notre offre</h3>
+			<p>
+				Notre carte de plats à emporter change régulièrement en fonction des saisons et des inspirations de notre chef. Voici un aperçu de ce que nous proposons :
+			</p>
+
+			<h4>Entrées</h4>
+			<ul>
+				<li>Terrine maison et ses condiments (12€)</li>
+				<li>Salade composée de saison (10€)</li>
+				<li>Velouté du moment (8€)</li>
+			</ul>
+
+			<h4>Plats</h4>
+			<ul>
+				<li>Filet de poisson selon arrivage, sauce au choix (18€)</li>
+				<li>Suprême de volaille fermière, jus corsé et légumes de saison (16€)</li>
+				<li>Plat du jour (14€)</li>
+				<li>Pièce de bœuf, sauce béarnaise et pommes grenailles (20€)</li>
+			</ul>
+
+			<h4>Desserts</h4>
+			<ul>
+				<li>Tarte du jour (6€)</li>
+				<li>Mousse au chocolat (5€)</li>
+				<li>Crème brûlée à la vanille (6€)</li>
+				<li>Salade de fruits frais (5€)</li>
+			</ul>
+
+			<h3>Menus spéciaux</h3>
+			<p>
+				Nous proposons également des menus spéciaux pour vos événements :
+			</p>
+			<ul>
+				<li><strong>Menu Découverte</strong> (entrée + plat + dessert) : 30€/personne</li>
+				<li><strong>Plateau Apéritif</strong> (pour 4-6 personnes) : 35€</li>
+				<li><strong>Menu Enfant</strong> (plat + dessert) : 12€</li>
+			</ul>
+
+			<h3>Informations pratiques</h3>
+			<ul>
+				<li><strong>Horaires de retrait :</strong> Du mardi au samedi de 11h30 à 14h et de 18h à 21h</li>
+				<li><strong>Allergènes :</strong> N'hésitez pas à nous signaler vos allergies ou intolérances alimentaires</li>
+				<li><strong>Conditionnement :</strong> Nos plats sont conditionnés dans des emballages écologiques</li>
+			</ul>
+
+			<h3>Commandez dès maintenant</h3>
+			<p>
+				Pour commander nos plats à emporter ou pour obtenir plus d'informations, contactez-nous par téléphone. Notre équipe se fera un plaisir de vous renseigner et de préparer votre commande avec soin.
+			</p>
+		</Article>
+	</Section>
+</Layout>

@@ -1,0 +1,100 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import Section from "~/components/Section.astro";
+import Hero from "~/components/Hero.astro";
+import { Picture } from "astro:assets";
+import Badge from "~/components/Badge.astro";
+import Button from "~/components/Button.astro";
+import ButtonCallUs from "~/components/ButtonCallUs.astro";
+import Article from "~/components/Article.astro";
+
+// Images
+import HeroImage from "~/assets/images/pexels-adrienn-638530-1537635.jpg";
+import { phone } from "~/data/config";
+---
+
+<Layout title="Mariage & Réception" pageTitle="Mariage & Réception" description="Services de traiteur pour mariages et réceptions">
+	<Section class:list={"bg-white"}>
+		<Hero>
+			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
+				<Badge title="Mariage & Réception" />
+				<h1 class="font-black">Faites de votre mariage ou réception un moment inoubliable</h1>
+
+				<p>
+					Pour votre jour spécial, La Goutte Noire vous propose un service de traiteur haut de gamme. Nous nous occupons de tout, des entrées au dessert, pour que vous puissiez profiter pleinement de votre événement.
+				</p>
+
+				<span class="text-brand-green font-medium">✔ Menus personnalisés</span>
+
+				<div class="mt-8 flex items-center gap-x-8">
+					<Button url={phone.href}>Demander un devis</Button>
+					<ButtonCallUs />
+				</div>
+			</div>
+			<div slot="hero-content-right">
+				<Picture
+					class:list={"mx-auto"}
+					src={HeroImage}
+					height={600}
+					formats={["avif", "webp"]}
+					alt="Mariage et réception"
+					loading={"eager"}
+					fetchpriority={"high"}
+				/>
+			</div>
+		</Hero>
+	</Section>
+
+	<Section class:list={'bg-white'}>
+		<Article>
+			<h2>Un service complet pour votre mariage ou réception</h2>
+			<p>
+				Chez <strong>La Goutte Noire</strong>, nous comprenons l'importance de votre mariage ou de votre réception. C'est pourquoi nous mettons tout en œuvre pour créer une expérience gastronomique exceptionnelle qui répondra à vos attentes et impressionnera vos invités.
+			</p>
+
+			<h3>Nos prestations</h3>
+			<p>
+				Notre service traiteur pour mariages et réceptions comprend :
+			</p>
+			<ul>
+				<li><strong>Consultation personnalisée :</strong> Nous travaillons avec vous pour comprendre vos préférences et créer un menu sur mesure</li>
+				<li><strong>Dégustation préalable :</strong> Goûtez et approuvez votre menu avant le grand jour</li>
+				<li><strong>Service complet :</strong> Notre équipe professionnelle s'occupe du service, de la mise en place et du rangement</li>
+				<li><strong>Options de boissons :</strong> Du champagne aux cocktails, nous proposons une sélection variée de boissons</li>
+				<li><strong>Gâteau de mariage :</strong> Des créations sur mesure pour couronner votre célébration</li>
+			</ul>
+
+			<h3>Formules adaptées</h3>
+			<p>
+				Nous proposons différentes formules adaptées à vos besoins et à votre budget :
+			</p>
+			<ul>
+				<li><strong>Cocktail dînatoire</strong></li>
+				<li><strong>Buffet</strong></li>
+				<li><strong>Repas assis</strong></li>
+				<li><strong>Brunch du lendemain</strong></li>
+			</ul>
+
+			<h3>Des menus d'exception</h3>
+			<p>
+				Notre chef élabore des menus d'exception à base de produits frais et de saison. De l'apéritif au dessert, chaque plat est préparé avec soin pour offrir une expérience gustative mémorable à vos invités.
+			</p>
+
+			<h3>Lieux de réception</h3>
+			<p>
+				Nous intervenons dans tous types de lieux :
+			</p>
+			<ul>
+				<li>Salles de réception</li>
+				<li>Domaines et châteaux</li>
+				<li>Jardins et espaces extérieurs</li>
+				<li>Lieux atypiques</li>
+			</ul>
+
+			<h3>Demandez un devis</h3>
+			<p>
+				Pour obtenir un devis personnalisé ou pour plus d'informations sur nos services de traiteur pour mariages et réceptions, n'hésitez pas à nous contacter. Notre équipe se fera un plaisir de vous accompagner dans la préparation de votre événement.
+			</p>
+		</Article>
+	</Section>
+</Layout>

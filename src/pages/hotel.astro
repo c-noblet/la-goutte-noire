@@ -1,0 +1,99 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import Section from "~/components/Section.astro";
+import Hero from "~/components/Hero.astro";
+import { Picture } from "astro:assets";
+import Badge from "~/components/Badge.astro";
+import Button from "~/components/Button.astro";
+import ButtonCallUs from "~/components/ButtonCallUs.astro";
+import Article from "~/components/Article.astro";
+import WideImage from "~/components/WideImage.astro";
+
+// Images
+import ExterieurImage from "~/assets/images/exterieur.jpeg";
+import Exterieur2Image from "~/assets/images/exterieur-2.jpeg";
+import Exterieur3Image from "~/assets/images/vue-de-face.jpg";
+import Exterieur4Image from "~/assets/images/vue-d-ensemble.jpg";
+import InterieurImage from "~/assets/images/interieur.jpeg";
+import VerandaImage from "~/assets/images/veranda.jpg";
+import ReceptionImage from "~/assets/images/reception-hotel-et-restaurant.jpg"
+import Reception2Image from "~/assets/images/reception-hotel-et-restaurant-2.jpg";
+import PetitDejImage from "~/assets/images/salle-de-petit-dejeuner.jpg";
+import SalleJauneImage from "~/assets/images/salle-jaune-16-couverts.jpg";
+import TerrasseImage from "~/assets/images/terrasse-et-jardiniere.jpg";
+import ChambreImage from "~/assets/images/chambre.png";
+import { phone } from "~/data/config";
+---
+
+<Layout title="Hôtel" pageTitle="Hôtel" description="Découvrez notre hôtel chaleureux et confortable">
+	<Section class:list={"bg-white"}>
+		<Hero>
+			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
+				<Badge title="Confort et élégance" />
+				<h1 class="font-black">Un hôtel de charme pour un séjour inoubliable</h1>
+
+				<p>
+					Profitez de nos chambres confortables et élégantes, idéalement situées pour découvrir la région. Notre hôtel vous offre un environnement paisible et des services personnalisés pour rendre votre séjour mémorable.
+				</p>
+
+				<span class="text-brand-green font-medium">✔ Petit-déjeuner inclus</span>
+
+				<div class="mt-8 flex items-center gap-x-8">
+					<Button url={phone.href}>Réserver</Button>
+					<ButtonCallUs />
+				</div>
+			</div>
+			<div slot="hero-content-right">
+				<Picture
+					class:list={"mx-auto crop"}
+					src={ChambreImage}
+					height={600}
+					formats={["avif", "webp"]}
+					alt="Intérieur de notre hôtel"
+					loading={"eager"}
+					fetchpriority={"high"}
+				/>
+			</div>
+		</Hero>
+	</Section>
+
+	<WideImage image={PetitDejImage} alt="Vue extérieure de l'hôtel" class:list={"aspect-video lg:aspect-[16/6]"} />
+
+	<Section class:list={'bg-white'}>
+		<Article>
+			<h2>Bienvenue à l'Hôtel La Goutte Noire</h2>
+			<p>
+				Niché dans un cadre enchanteur, <strong>l'Hôtel La Goutte Noire</strong> vous propose une expérience unique alliant confort moderne et charme traditionnel. Notre établissement offre un havre de paix pour les voyageurs en quête d'authenticité.
+			</p>
+
+			<h3>Nos Chambres</h3>
+			<p>
+				Chacune de nos chambres est décorée avec soin, alliant élégance et confort. Que vous choisissiez une chambre standard, supérieure ou notre suite, vous bénéficierez d'équipements modernes et d'une atmosphère chaleureuse propice à la détente.
+			</p>
+
+			<h3>Services et Commodités</h3>
+			<ul>
+				<li><strong>Petit-déjeuner gastronomique</strong> préparé avec des produits locaux</li>
+				<li><strong>Wi-Fi gratuit</strong> dans tout l'établissement</li>
+				<li><strong>Parking privé</strong> sécurisé</li>
+				<li><strong>Service de chambre</strong> disponible</li>
+				<li><strong>Réception ouverte 24h/24</strong> pour répondre à tous vos besoins</li>
+			</ul>
+
+			<h3>Situation Idéale</h3>
+			<p>
+				Idéalement situé, notre hôtel vous permet d'accéder facilement aux attractions touristiques de la région, tout en vous offrant un refuge paisible après vos journées d'exploration. Notre équipe se fera un plaisir de vous conseiller sur les meilleures activités et visites à faire dans les environs.
+			</p>
+
+			<h3>Restaurant Intégré</h3>
+			<p>
+				Profitez de notre restaurant pour déguster une cuisine traditionnelle et gastronomique. Nos chefs passionnés vous proposent des plats savoureux préparés avec des ingrédients frais et de saison. Une expérience culinaire qui complète parfaitement votre séjour.
+			</p>
+
+			<h3>Réservez dès maintenant</h3>
+			<p>
+				Pour garantir votre séjour à l'Hôtel La Goutte Noire, nous vous invitons à réserver à l'avance. Notre équipe est à votre disposition pour répondre à toutes vos questions et vous aider à planifier un séjour inoubliable.
+			</p>
+		</Article>
+	</Section>
+</Layout>

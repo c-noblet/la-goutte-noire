@@ -73,7 +73,7 @@ Inside of your AstroPie project, you'll see the following folders and files:
 -   Menu: menu.astro
 -   Gallery: gallery.astro
 -   Contact: contact.astro
--   Book a Table: book.astro
+-   Réserver une table: book.astro
 
 ## 🧩 Available Components
 

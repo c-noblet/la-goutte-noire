@@ -1,27 +1,27 @@
 [
 	{
 		"id": 1,
-		"author": "Jane Doe",
-		"review": "The food was amazing! I loved the atmosphere and the service was great."
+		"author": "Marie-Adelaide PALLIENNE",
+		"review": "Habitant depuis deux ans sur Châteaumeillant, j’ai le plaisir de faire partager à mes amis ce restaurant. Accueil, chaleureux. Restaurateur respectueux du goût de chacun. Je recommande à tous lors du passage dans nos contrées d’y venir faire un excellent repas."
 	},
 	{
 		"id": 2,
-		"author": "John Smith",
-		"review": "The best Italian food I've ever had. I can't wait to come back!"
+		"author": "Remi JOUARNNET",
+		"review": "Un restaurant gastronomique de qualité, nous nous sommes régalés. Un accueil chaleureux. Je recommande sans hésitation. Merci pour ce super moment."
 	},
 	{
 		"id": 3,
-		"author": "Alice Johnson",
-		"review": "The pasta was perfectly cooked and the sauce was delicious. I highly recommend this restaurant."
+		"author": "Anonyme",
+		"review": "Restaurant très agréable, très belle véranda. Personnel fort sympathique. Excellente cuisine, adaptée pour celles et ceux qui ne mangent pas de viande. Nous y reviendrons avec grand plaisir !"
 	},
 	{
 		"id": 4,
-		"author": "Bob Brown",
-		"review": "The pizza was fantastic! I will definitely be ordering from here again."
+		"author": "Gaw Ouelle",
+		"review": "Merci pour cet accueil en dépit de notre heure d’arrivée tardive et sans réservation. Le menu proposé était parfait simple et copieux. Le personnel accueillant et disponible. Nous avons passé une agréable pause déjeuner dans un cadre sympathique."
 	},
 	{
 		"id": 5,
-		"author": "Sarah Wilson",
-		"review": "The tiramisu was to die for. I will be dreaming about it for weeks."
+		"author": "Anonyme",
+		"review": "Accueil sympathique, disons chaleureux ; Chrystelle, la maîtresse des lieux, est d'une disponibilité hors du commun ; Pour nous pèlerins sur Compostelle, elle nous a grandement facilité notre randonnée ; Menu pèlerin gastronomique , chambre …"
 	}
 ]

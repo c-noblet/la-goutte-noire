@@ -5,23 +5,21 @@ import alpinejs from "@astrojs/alpinejs";
 import playformInline from "@playform/inline";
 import mdx from "@astrojs/mdx";
 
+import react from "@astrojs/react";
+
 // https://astro.build/config
 export default defineConfig({
-	site: "https://astropie.netlify.app",
-	base: "/",
-	// trailingSlash: 'always',
-	integrations: [
-		alpinejs(),
-		playformInline({
-			Beasties: true,
-		}),
-		mdx(),
-	],
-	output: "static",
-	devToolbar: {
-		enabled: false,
-	},
-	vite: {
-		plugins: [tailwindcss()],
-	},
+    site: "https://www.la-goutte-noire.fr",
+    base: "/",
+    // trailingSlash: 'always',
+    integrations: [alpinejs(), playformInline({
+        Beasties: true,
+		}), mdx(), react()],
+    output: "static",
+    devToolbar: {
+        enabled: false,
+    },
+    vite: {
+        plugins: [tailwindcss()],
+    },
 });

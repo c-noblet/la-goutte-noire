@@ -2,55 +2,182 @@
 	{
 		"id": 1,
 		"title": "pexels-adrienn",
-		"image": "/src/assets/images/gallery/pexels-adrienn-638530-1537635.jpg",
-		"alt": "pexels-adrienn-638530-1537635"
+		"image": "/src/assets/images/accompagnements-aperitifs.jpg",
+		"alt": ""
 	},
 	{
 		"id": 2,
 		"title": "pexels-annija-mieze",
-		"image": "/src/assets/images/gallery/pexels-annija-mieze-427042079-15197931.jpg",
+		"image": "/src/assets/images/buffet-froid.jpg",
 		"alt": "pexels-annija-mieze-427042079-15197931"
 	},
 	{
 		"id": 3,
 		"title": "pexels-enginakyurt",
-		"image": "/src/assets/images/gallery/pexels-enginakyurt-1487511.jpg",
+		"image": "/src/assets/images/caption.jpg",
 		"alt": "pexels-enginakyurt-1487511"
 	},
 	{
 		"id": 4,
 		"title": "pexels-fariphotography",
-		"image": "/src/assets/images/gallery/pexels-fariphotography-905847.jpg",
+		"image": "/src/assets/images/caption-2.jpg",
 		"alt": "pexels-fariphotography-905847"
 	},
 	{
 		"id": 5,
 		"title": "pexels-narda-yescas",
-		"image": "/src/assets/images/gallery/pexels-narda-yescas-724842-1566837.jpg",
+		"image": "/src/assets/images/caption-4.jpg",
 		"alt": "pexels-narda-yescas-724842-1566837"
 	},
 	{
 		"id": 6,
 		"title": "pexels-pixabay",
-		"image": "/src/assets/images/gallery/pexels-pixabay-262978.jpg",
+		"image": "/src/assets/images/chambre.png",
 		"alt": "pexels-pixabay-262978"
 	},
 	{
 		"id": 7,
 		"title": "pexels-rachel-claire",
-		"image": "/src/assets/images/gallery/pexels-rachel-claire-5531424.jpg",
+		"image": "/src/assets/images/desserts-de-mariage-sur.jpg",
 		"alt": "pexels-rachel-claire-5531424"
 	},
 	{
 		"id": 8,
 		"title": "pexels-vlah",
-		"image": "/src/assets/images/gallery/pexels-vlah-3084550.jpg",
+		"image": "/src/assets/images/exterieur.jpeg",
 		"alt": "pexels-vlah-3084550"
 	},
 	{
 		"id": 9,
 		"title": "pexels-wildlittlethingsphoto",
-		"image": "/src/assets/images/gallery/pexels-wildlittlethingsphoto-696218.jpg",
+		"image": "/src/assets/images/fromage.png",
+		"alt": "pexels-wildlittlethingsphoto-696218"
+	},
+	{
+		"id": 10,
+		"title": "pexels-wildlittlethingsphoto-2",
+		"image": "/src/assets/images/fromage-2.png",
+		"alt": "pexels-wildlittlethingsphoto-696218"
+	},
+	{
+		"id": 11,
+		"title": "pexels-wildlittlethingsphoto-3",
+		"image": "/src/assets/images/interieur.jpeg",
+		"alt": "pexels-wildlittlethingsphoto-696218"
+	},
+	{
+		"id": 12,
+		"title": "pexels-wildlittlethingsphoto-4",
+		"image": "/src/assets/images/interieur.png",
+		"alt": "pexels-wildlittlethingsphoto-696218"
+	},
+	{
+		"id": 13,
+		"title": "pexels-wildlittlethingsphoto-5",
+		"image": "/src/assets/images/la-goutte-noire.jpg",
+		"alt": "pexels-wildlittlethingsphoto-696218"
+	},
+	{
+		"id": 14,
+		"title": "pexels-wildlittlethingsphoto-6",
+		"image": "/src/assets/images/la-goutte-noire-2.jpg",
+		"alt": "pexels-wildlittlethingsphoto-696218"
+	},
+	{
+		"id": 15,
+		"title": "pexels-wildlittlethingsphoto-7",
+		"image": "/src/assets/images/la-goutte-noire-3.jpg",
+		"alt": "pexels-wildlittlethingsphoto-696218"
+	},
+	{
+		"id": 16,
+		"title": "pexels-wildlittlethingsphoto-8",
+		"image": "/src/assets/images/la-goutte-noire-4.jpg",
+		"alt": "pexels-wildlittlethingsphoto-696218"
+	},
+	{
+		"id": 17,
+		"title": "pexels-wildlittlethingsphoto-9",
+		"image": "/src/assets/images/meli-melo-de-salades.jpg",
+		"alt": "pexels-wildlittlethingsphoto-696218"
+	},
+	{
+		"id": 18,
+		"title": "pexels-wildlittlethingsphoto-10",
+		"image": "/src/assets/images/noix-de-st-jacques-roties.jpg",
+		"alt": "pexels-wildlittlethingsphoto-696218"
+	},
+	{
+		"id": 19,
+		"title": "pexels-wildlittlethingsphoto-11",
+		"image": "/src/assets/images/presentation-d-entremets.jpg",
+		"alt": "pexels-wildlittlethingsphoto-696218"
+	},
+	{
+		"id": 20,
+		"title": "pexels-wildlittlethingsphoto-12",
+		"image": "/src/assets/images/presentation-de-produits.jpg",
+		"alt": "pexels-wildlittlethingsphoto-696218"
+	},
+	{
+		"id": 21,
+		"title": "pexels-wildlittlethingsphoto-13",
+		"image": "/src/assets/images/reception.png",
+		"alt": "pexels-wildlittlethingsphoto-696218"
+	},
+	{
+		"id": 22,
+		"title": "pexels-wildlittlethingsphoto-14",
+		"image": "/src/assets/images/reception-hotel-et-restaurant.jpg",
+		"alt": "pexels-wildlittlethingsphoto-696218"
+	},
+	{
+		"id": 23,
+		"title": "pexels-wildlittlethingsphoto-15",
+		"image": "/src/assets/images/reception-hotel-et-restaurant-2.jpg",
+		"alt": "pexels-wildlittlethingsphoto-696218"
+	},
+	{
+		"id": 24,
+		"title": "pexels-wildlittlethingsphoto-16",
+		"image": "/src/assets/images/salle-de-petit-dejeuner.jpg",
+		"alt": "pexels-wildlittlethingsphoto-696218"
+	},
+	{
+		"id": 25,
+		"title": "pexels-wildlittlethingsphoto-17",
+		"image": "/src/assets/images/salle-jaune.png",
+		"alt": "pexels-wildlittlethingsphoto-696218"
+	},
+	{
+		"id": 26,
+		"title": "pexels-wildlittlethingsphoto-18",
+		"image": "/src/assets/images/salle-jaune-16-couverts.jpg",
+		"alt": "pexels-wildlittlethingsphoto-696218"
+	},
+	{
+		"id": 27,
+		"title": "pexels-wildlittlethingsphoto-19",
+		"image": "/src/assets/images/terrasse-et-jardiniere.jpg",
+		"alt": "pexels-wildlittlethingsphoto-696218"
+	},
+	{
+		"id": 28,
+		"title": "pexels-wildlittlethingsphoto-20",
+		"image": "/src/assets/images/veranda.jpg",
+		"alt": "pexels-wildlittlethingsphoto-696218"
+	},
+	{
+		"id": 29,
+		"title": "pexels-wildlittlethingsphoto-21",
+		"image": "/src/assets/images/vue-de-face.jpg",
+		"alt": "pexels-wildlittlethingsphoto-696218"
+	},
+	{
+		"id": 30,
+		"title": "pexels-wildlittlethingsphoto-22",
+		"image": "/src/assets/images/vue-d-ensemble.jpg",
 		"alt": "pexels-wildlittlethingsphoto-696218"
 	}
+
 ]

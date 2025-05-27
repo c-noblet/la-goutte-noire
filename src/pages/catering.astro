@@ -1,0 +1,155 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import Section from "~/components/Section.astro";
+import Hero from "~/components/Hero.astro";
+import { Picture } from "astro:assets";
+import Badge from "~/components/Badge.astro";
+import Button from "~/components/Button.astro";
+import ButtonCallUs from "~/components/ButtonCallUs.astro";
+import Article from "~/components/Article.astro";
+import Grid from "~/components/Grid.astro";
+import Heading from "~/components/Heading.astro";
+
+// Images
+import HeroImage from "~/assets/images/mussels.png";
+import WeddingImage from "~/assets/images/pexels-adrienn-638530-1537635.jpg";
+import HomeTeamImage from "~/assets/images/pexels-rachel-claire-5531424.jpg";
+import TakeawayImage from "~/assets/images/fish.png";
+import ReferencesImage from "~/assets/images/pexels-pixabay-262978.jpg";
+import { phone } from "~/data/config";
+---
+
+<Layout title="Traiteur" pageTitle="Traiteur" description="Découvrez nos services de traiteur pour tous vos événements">
+	<Section class:list={"bg-white"}>
+		<Hero>
+			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
+				<Badge title="Service Traiteur" />
+				<h1 class="font-black">Des prestations de traiteur sur mesure pour tous vos événements</h1>
+
+				<p>
+					La Goutte Noire vous propose ses services de traiteur pour tous vos événements, qu'il s'agisse d'un mariage, d'une réception d'entreprise ou d'un dîner privé. Nous mettons notre savoir-faire et notre passion au service de vos moments les plus importants.
+				</p>
+
+				<span class="text-brand-green font-medium">✔ Événements privés et professionnels</span>
+
+				<div class="mt-8 flex items-center gap-x-8">
+					<Button url={phone.href}>Nous contacter</Button>
+					<ButtonCallUs />
+				</div>
+			</div>
+			<div slot="hero-content-right">
+				<Picture
+					class:list={"mx-auto"}
+					src={HeroImage}
+					height={600}
+					formats={["avif", "webp"]}
+					alt="Service traiteur"
+					loading={"eager"}
+					fetchpriority={"high"}
+				/>
+			</div>
+		</Hero>
+	</Section>
+
+	<Section class:list={"bg-white"}>
+		<Heading>
+			<h2 slot="heading-title" class="font-black text-brand-green h2">Nos services de traiteur</h2>
+			<p slot="heading-content">
+				Découvrez l'ensemble de nos prestations traiteur adaptées à vos besoins et à vos envies
+			</p>
+		</Heading>
+
+		<Grid>
+			<div slot="grid-content-1">
+				<div class="flex flex-col items-center prose text-center">
+					<Picture
+						class:list={"not-prose w-full h-auto aspect-video object-cover"}
+						src={WeddingImage}
+						formats={["avif", "webp"]}
+						alt="Mariage et réception"
+					/>
+					<h3 class="h4 mt-0 font-black">Mariage & Réception</h3>
+					<p>
+						Organisez votre mariage ou réception avec notre service traiteur. Nous proposons des menus personnalisés et un service impeccable pour votre jour spécial.
+					</p>
+					<Button url="/catering/wedding" class="mt-4">En savoir plus</Button>
+				</div>
+			</div>
+
+			<div slot="grid-content-2">
+				<div class="flex flex-col items-center prose text-center">
+					<Picture
+						class:list={"not-prose w-full h-auto aspect-video object-cover"}
+						src={HomeTeamImage}
+						formats={["avif", "webp"]}
+						alt="Équipe à domicile"
+					/>
+					<h3 class="h4 mt-0 font-black">Une équipe à domicile</h3>
+					<p>
+						Profitez de notre service traiteur à domicile pour vos événements. Notre équipe professionnelle s'occupe de tout, de la préparation au service.
+					</p>
+					<Button url="/catering/home-team" class="mt-4">En savoir plus</Button>
+				</div>
+			</div>
+
+			<div slot="grid-content-3">
+				<div class="flex flex-col items-center prose text-center">
+					<Picture
+						class:list={"not-prose w-full h-auto aspect-video object-cover"}
+						src={TakeawayImage}
+						formats={["avif", "webp"]}
+						alt="Plats à emporter"
+					/>
+					<h3 class="h4 mt-0 font-black">Plats à emporter</h3>
+					<p>
+						Découvrez notre sélection de plats à emporter, prêts à déguster. Des options délicieuses pour vos repas à la maison sans le stress de la cuisine.
+					</p>
+					<Button url="/catering/takeaway" class="mt-4">En savoir plus</Button>
+				</div>
+			</div>
+
+			<div slot="grid-content-4">
+				<div class="flex flex-col items-center prose text-center">
+					<Picture
+						class:list={"not-prose w-full h-auto aspect-video object-cover"}
+						src={ReferencesImage}
+						formats={["avif", "webp"]}
+						alt="Nos références"
+					/>
+					<h3 class="h4 mt-0 font-black">Nos références</h3>
+					<p>
+						Consultez nos références pour découvrir nos réalisations en traiteur. Des clients satisfaits témoignent de la qualité de nos services.
+					</p>
+					<Button url="/catering/references" class="mt-4">En savoir plus</Button>
+				</div>
+			</div>
+		</Grid>
+	</Section>
+
+	<Section class:list={'bg-white'}>
+		<Article>
+			<h2>La Goutte Noire Traiteur - Une expérience culinaire exceptionnelle</h2>
+			<p>
+				Depuis plus de 20 ans, <strong>La Goutte Noire</strong> met son expertise et sa passion au service de vos événements. Notre équipe de professionnels s'engage à créer des expériences culinaires mémorables, adaptées à vos besoins et à vos envies.
+			</p>
+
+			<h3>Notre philosophie</h3>
+			<p>
+				Nous croyons que chaque événement est unique et mérite une attention particulière. C'est pourquoi nous travaillons en étroite collaboration avec nos clients pour comprendre leurs attentes et créer des menus personnalisés qui raviront leurs invités.
+			</p>
+
+			<h3>Nos engagements</h3>
+			<ul>
+				<li><strong>Qualité des produits :</strong> Nous sélectionnons avec soin des produits frais et de saison</li>
+				<li><strong>Savoir-faire :</strong> Notre équipe de chefs expérimentés maîtrise les techniques culinaires traditionnelles et modernes</li>
+				<li><strong>Service impeccable :</strong> Notre personnel attentif et professionnel veille au bon déroulement de votre événement</li>
+				<li><strong>Personnalisation :</strong> Nous adaptons nos prestations à vos besoins spécifiques</li>
+			</ul>
+
+			<h3>Contactez-nous</h3>
+			<p>
+				Pour discuter de votre projet et obtenir un devis personnalisé, n'hésitez pas à nous contacter. Notre équipe est à votre disposition pour répondre à toutes vos questions et vous accompagner dans l'organisation de votre événement.
+			</p>
+		</Article>
+	</Section>
+</Layout>
