@@ -1,20 +1,22 @@
 ---
-import Layout from "~/layouts/Layout.astro";
-import Section from "~/components/Section.astro";
-import Hero from "~/components/Hero.astro";
+import Layout from "@/layouts/Layout.astro";
+import Section from "@/components/Section.astro";
+import Hero from "@/components/Hero.astro";
 import { Picture } from "astro:assets";
-import Badge from "~/components/Badge.astro";
-import Button from "~/components/Button.astro";
-import ButtonCallUs from "~/components/ButtonCallUs.astro";
-import Article from "~/components/Article.astro";
-import ReviewSlider from "~/components/ReviewSlider.astro";
+import Badge from "@/components/Badge.astro";
+import Button from "@/components/Button.astro";
+import ButtonCallUs from "@/components/ButtonCallUs.astro";
+import Article from "@/components/Article.astro";
+import ReviewSlider from "@/components/ReviewSlider.astro";
 
 // Images
-import HeroImage from "~/assets/images/pexels-pixabay-262978.jpg";
-import { phone } from "~/data/config";
+import VerandaImage from "@/assets/images/veranda.jpg";
+import ReceptionImage from "@/assets/images/reception-hotel-et-restaurant.jpg"
+import Reception2Image from "@/assets/images/reception-hotel-et-restaurant-2.jpg";
+import { phone } from "@/data/config";
 
 // Get reviews from JSON file
-import reviews from "~/data/reviews.json";
+import reviews from "@/data/reviews.json";
 ---
 
 <Layout title="Nos références" pageTitle="Nos références" description="Découvrez les témoignages de nos clients satisfaits">
@@ -38,7 +40,7 @@ import reviews from "~/data/reviews.json";
 			<div slot="hero-content-right">
 				<Picture
 					class:list={"mx-auto"}
-					src={HeroImage}
+					src={ReceptionImage}
 					height={600}
 					formats={["avif", "webp"]}
 					alt="Événement réalisé par notre service traiteur"

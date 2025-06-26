@@ -1,8 +1,8 @@
 'use client'
-import { menuMain } from "~/data/menus"
+import { menuMain } from "@/data/menus"
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, navigationMenuSubTriggerStyle, NavigationMenuTrigger, navigationMenuTriggerStyle } from "./navigation-menu"
 import React from "react"
-import { cn } from "~/lib/utils"
+import { cn } from "@/lib/utils"
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,

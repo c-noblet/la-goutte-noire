@@ -1,16 +1,18 @@
 ---
-import Layout from "~/layouts/Layout.astro";
-import Section from "~/components/Section.astro";
-import Hero from "~/components/Hero.astro";
+import Layout from "@/layouts/Layout.astro";
+import Section from "@/components/Section.astro";
+import Hero from "@/components/Hero.astro";
 import { Picture } from "astro:assets";
-import Badge from "~/components/Badge.astro";
-import Button from "~/components/Button.astro";
-import ButtonCallUs from "~/components/ButtonCallUs.astro";
-import Article from "~/components/Article.astro";
+import Badge from "@/components/Badge.astro";
+import Button from "@/components/Button.astro";
+import ButtonCallUs from "@/components/ButtonCallUs.astro";
+import Article from "@/components/Article.astro";
 
 // Images
-import HeroImage from "~/assets/images/pexels-adrienn-638530-1537635.jpg";
-import { phone } from "~/data/config";
+import VerandaImage from "@/assets/images/veranda.jpg";
+import ReceptionImage from "@/assets/images/reception-hotel-et-restaurant.jpg"
+import Reception2Image from "@/assets/images/reception-hotel-et-restaurant-2.jpg";
+import { phone } from "@/data/config";
 ---
 
 <Layout title="Mariage & Réception" pageTitle="Mariage & Réception" description="Services de traiteur pour mariages et réceptions">
@@ -34,7 +36,7 @@ import { phone } from "~/data/config";
 			<div slot="hero-content-right">
 				<Picture
 					class:list={"mx-auto"}
-					src={HeroImage}
+					src={ReceptionImage}
 					height={600}
 					formats={["avif", "webp"]}
 					alt="Mariage et réception"

@@ -1,16 +1,16 @@
 ---
-import Layout from "~/layouts/Layout.astro";
-import Section from "~/components/Section.astro";
-import Hero from "~/components/Hero.astro";
+import Layout from "@/layouts/Layout.astro";
+import Section from "@/components/Section.astro";
+import Hero from "@/components/Hero.astro";
 import { Picture } from "astro:assets";
-import Badge from "~/components/Badge.astro";
-import Button from "~/components/Button.astro";
-import ButtonCallUs from "~/components/ButtonCallUs.astro";
-import Article from "~/components/Article.astro";
+import Badge from "@/components/Badge.astro";
+import Button from "@/components/Button.astro";
+import ButtonCallUs from "@/components/ButtonCallUs.astro";
+import Article from "@/components/Article.astro";
 
 // Images
-import PizzaHero from "~/assets/images/pizza-hero.png";
-import { phone } from "~/data/config";
+import HeroImage from "@/assets/images/interieur.jpeg";
+import { phone } from "@/data/config";
 ---
 
 <Layout>
@@ -18,10 +18,10 @@ import { phone } from "~/data/config";
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
 				<Badge title="Une restauration traditionnelle et gastronomique" />
-				<h1 class="font-black">Une authentique cuisine italienne dans un véritable restaurant italien...</h1>
+				<h1 class="font-black">Une cuisine française authentique dans un cadre chaleureux...</h1>
 
 				<p>
-					Découvrez le goût de l'Italie avec nos plats authentiques préparés à partir des meilleurs ingrédients. Savourez notre grande variété de pizzas, pâtes et desserts, tous préparés avec amour et tradition. Que vous dîniez sur place ou emportiez votre repas, nous vous promettons une expérience culinaire mémorable.
+					Découvrez le goût de la France avec nos plats authentiques préparés à partir des meilleurs ingrédients. Savourez notre grande variété de spécialités régionales, vins et fromages, tous préparés avec soin et générosité. Que vous dîniez sur place ou emportiez votre repas, nous vous promettons une expérience culinaire mémorable.
 				</p>
 
 				<span class="text-brand-green font-medium">✔ Plats à emporter</span>
@@ -34,7 +34,7 @@ import { phone } from "~/data/config";
 			<div slot="hero-content-right">
 				<Picture
 					class:list={"mx-auto"}
-					src={PizzaHero}
+					src={HeroImage}
 					height={600}
 					formats={["avif", "webp"]}
 					alt="A description of my image."
@@ -49,30 +49,10 @@ import { phone } from "~/data/config";
 		<Article>
 			<h2>Bienvenue à La Goutte Noire</h2>
 			<p>
-				Niché au cœur de la ville, <strong>La Goutte Noire</strong> offre une expérience culinaire italienne authentique comme nulle autre. Dès que vous franchissez nos portes, vous êtes transporté dans les rues animées d'Italie, où la bonne nourriture et la convivialité sont au centre de la vie.
+				Après une aventure de 14 ans en forêt de Tronçais dans un autre restaurant, nous avons eu un coup de cœur à Châteaumeillant dans cet établissement qui se nommait à l'époque "ORESTOBERKO" et que nous avons rebaptisé "La Goutte Noire". Et le 5 juin 2012, l'aventure commençait. Après une fermeture de plus de trois ans, il fallait refaire une clientèle, ce que nous avons réussi à faire rapidement. Depuis, notre clientèle s'est bien diversifiée, aussi bien locale, régionale et plus loin encore. 8 ans de bonheur qui nous ont permis de placer notre établissement sur un bon créneau gastronomique GaultMillau et Michelin.
 			</p>
-
-			<h3>Notre Histoire</h3>
 			<p>
-				Fondé en <em>1998</em>, notre restaurant familial a toujours été une affaire de passion. Inspirés par les recettes transmises de génération en génération, nous apportons le <u>riche patrimoine culinaire</u> de l'Italie dans votre assiette. Chaque plat raconte une histoire, et chaque repas est une célébration de saveurs.
-			</p>
-
-			<h3>Notre Philosophie</h3>
-			<blockquote>"L'ingrédient secret est toujours l'amour."</blockquote>
-			<p>
-				À La Goutte Noire, nous croyons au simple plaisir des ingrédients frais, des techniques éprouvées, et à une passion pour créer des repas mémorables. De nos pâtes roulées à la main à nos pizzas cuites au feu de bois, chaque bouchée est préparée avec soin.
-			</p>
-
-			<h4>Ce qui nous rend spéciaux</h4>
-			<ul>
-				<li><strong>Authenticité :</strong> Des recettes traditionnelles, comme les préparait Mamie.</li>
-				<li><strong>Ingrédients Frais :</strong> Des produits locaux et des essentiels italiens importés.</li>
-				<li><strong>Ambiance Chaleureuse :</strong> Un lieu où tout le monde se sent comme en famille.</li>
-			</ul>
-
-			<h3>Rejoignez-nous</h3>
-			<p>
-				Que vous célébriez une occasion spéciale ou que vous vous abandonniez simplement aux plaisirs de la cuisine italienne, <strong>La Goutte Noire</strong> est la destination parfaite. <em>Venez pour la nourriture, restez pour les souvenirs.</em>
+				Venez découvrir ou redécouvrir La Goutte Noire, Hôtel, Restaurant, Traiteur.
 			</p>
 		</Article>
 	</Section>

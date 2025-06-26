@@ -9,17 +9,21 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-    site: "https://www.la-goutte-noire.fr",
+    site: "https://goutte-noire.cn-8-77.net",
     base: "/",
-    // trailingSlash: 'always',
     integrations: [alpinejs(), playformInline({
         Beasties: true,
-		}), mdx(), react()],
+        }), mdx(), react()],
     output: "static",
     devToolbar: {
         enabled: false,
     },
     vite: {
         plugins: [tailwindcss()],
+        resolve: {
+            alias: {
+                '@': new URL('./src', import.meta.url).pathname,
+            },
+        },
     },
 });
