@@ -1,7 +1,7 @@
 [
 	{
 		"id": 1,
-		"slug": "express",
+		"slug": "formule-express",
 		"prettyName": "Formule Express",
 		"description": "Déjeuner: Mercredi au samedi inclus (hors jours fériés). Dîner: Du mercredi au vendredi inclus (hors jours fériés).",
 		"plates": [
@@ -34,7 +34,7 @@
 	},
 	{
 		"id": 2,
-		"slug": "nouveaute",
+		"slug": "menu-nouveaute",
 		"prettyName": "Le menu Nouveauté",
 		"description": "",
 		"plates": [
@@ -62,7 +62,7 @@
 	},
 	{
 		"id": 3,
-		"slug": "chateaumeillant",
+		"slug": "le-chateaumeillant",
 		"prettyName": "Le Chateaumeillant",
 		"description": "",
 		"plates": [
@@ -90,7 +90,7 @@
 	},
 	{
 		"id": 4,
-		"slug": "lagouttenoire",
+		"slug": "la-goutte-noire",
 		"prettyName": "La Goutte Noire",
 		"description": "",
 		"plates": [

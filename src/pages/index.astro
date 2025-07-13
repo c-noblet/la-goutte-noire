@@ -31,8 +31,8 @@ import { phone, siteSlogan } from "@/data/config";
 	<Section class:list={"bg-white"}>
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
-				<Badge title="Chrystèle et Christophe Boudeau" />
-				<h1 class="font-black">Une restauration traditionnelle et gastronomique...</h1>
+				<Badge title="Chrystèle &amp; Christophe Boudeau" />
+				<h1 class="font-black">Une restauration traditionnelle &amp; gastronomique...</h1>
 
 				<p>{siteSlogan}</p>
 
@@ -45,9 +45,9 @@ import { phone, siteSlogan } from "@/data/config";
 			</div>
 			<div slot="hero-content-right">
 				<Picture
-					class:list={"mx-auto crop"}
+					class:list={"mx-auto rounded-xl"}
 					src={Exterieur4Image}
-					height={600}
+					height={800}
 					formats={["avif", "webp"]}
 					alt="A description of my image."
 					loading={"eager"}
@@ -60,90 +60,21 @@ import { phone, siteSlogan } from "@/data/config";
 	<WideImage image={InterieurImage} alt="Just an image" class:list={"aspect-video lg:aspect-[16/6]"} />
 
 	<Section class:list={"bg-white"}>
-		<Heading>
-			<h2 slot="heading-title" class="font-black text-brand-green h2">Nos plats</h2>
-			<p slot="heading-content">
-				Découvrez notre sélection de plats italiens authentiques, des pizzas classiques aux pâtes maison.
-			</p>
-		</Heading>
-
-		<Grid>
-			<div slot="grid-content-1">
-				<div class="flex flex-col items-center prose text-center">
-					<Picture
-						class:list={"not-prose w-full h-auto"}
-						src={InterieurImage}
-						formats={["avif", "webp"]}
-						alt="A description of my image."
-					/>
-					<h3 class="h4 mt-0 font-black">Pâtes &amp; Spaghetti</h3>
-					<p>
-						Les pâtes sont un élément de base de la cuisine italienne, avec une riche histoire remontant à plusieurs siècles. Elles se déclinent en diverses formes et tailles, chacune adaptée à différentes sauces et préparations.
-					</p>
-				</div>
-			</div>
-
-			<div slot="grid-content-2">
-				<div class="flex flex-col items-center prose text-center">
-					<Picture
-						class:list={"not-prose w-full h-auto"}
-						src={InterieurImage}
-						formats={["avif", "webp"]}
-						alt="A description of my image."
-					/>
-					<h3 class="h4 mt-0 font-black">Pâtes &amp; Spaghetti</h3>
-					<p>
-						Les pâtes sont un élément de base de la cuisine italienne, avec une riche histoire remontant à plusieurs siècles. Elles se déclinent en diverses formes et tailles, chacune adaptée à différentes sauces et préparations.
-					</p>
-				</div>
-			</div>
-
-			<div slot="grid-content-3">
-				<div class="flex flex-col items-center prose text-center">
-					<Picture
-						class:list={"not-prose w-full h-auto"}
-						src={InterieurImage}
-						formats={["avif", "webp"]}
-						alt="A description of my image."
-					/>
-					<h3 class="h4 mt-0 font-black">Pâtes &amp; Spaghetti</h3>
-					<p>
-						Les pâtes sont un élément de base de la cuisine italienne, avec une riche histoire remontant à plusieurs siècles. Elles se déclinent en diverses formes et tailles, chacune adaptée à différentes sauces et préparations.
-					</p>
-				</div>
-			</div>
-		</Grid>
-	</Section>
-
-	<Section class:list={"bg-white"}>
 		<Hero>
-			<div slot="hero-content-left" class="prose lg:order-2">
-				<h1 class="font-black">Pizza</h1>
+			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
+				<Badge color="red" title="rapide" />
+				<h2 class="font-black h2 !my-4">Formule Express</h2>
+
+				<span class="text-brand-red text-2xl font-bold italic">
+					Un repas rapide en moins de 30 minutes
+				</span>
 
 				<p>
-					La pizza est un plat bien-aimé originaire d'Italie qui est depuis devenu une sensation mondiale. Sa polyvalence permet des combinaisons infinies de garnitures, de la classique margherita avec des tomates fraîches, de la mozzarella et du basilic, à des options plus audacieuses comme le poulet barbecue ou le fromage végétalien.
-				</p>
-
-				<p>
-					Qu'elle soit dégustée dans une pizzeria chaleureuse ou livrée à votre porte, la pizza rassemble les gens et satisfait les envies comme aucun autre aliment. Au-delà de son goût délicieux, la pizza revêt également une importance culturelle. Elle est souvent associée aux rassemblements, aux célébrations et au réconfort.
+					La formule express est idéale pour les repas rapides. Elle comprend une entrée, un plat principal et un dessert, le tout servi en moins de 30 minutes. Parfait pour les pauses déjeuner ou les dîners rapides.
 				</p>
 
 				<div class="mt-8">
-					<Button url="/menu">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 20 20"
-							fill="currentColor"
-							class="size-5 inline-block"
-							aria-hidden="true"
-						>
-							<path
-								fill-rule="evenodd"
-								d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
-								clip-rule="evenodd"></path>
-						</svg>
-						Voir le menu
-					</Button>
+					<Button color="red" url="/menu#formule-express">Voir le menu</Button>
 				</div>
 			</div>
 			<div slot="hero-content-right">
@@ -160,21 +91,83 @@ import { phone, siteSlogan } from "@/data/config";
 
 	<Section class:list={"bg-white"}>
 		<Hero>
-			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
-				<Badge color="red" title="délicieux" />
-				<h2 class="font-black h2 !my-4">Plat de la semaine</h2>
+			<div slot="hero-content-right" class="prose max-w-none max-lg:order-1">
+				<Badge color="red" title="nouveauté" />
+				<h2 class="font-black h2 !my-4">Le menu Nouveauté</h2>
 
-				<span class="text-brand-red text-2xl font-bold italic">Moules fraîches !</span>
+				<span class="text-brand-red text-2xl font-bold italic">
+					Une sélection hebdomadaire de plats spéciaux
+				</span>
 
 				<p>
-					Notre plat de la semaine est un délicieux mets qui change chaque semaine. Cette semaine, nous proposons des moules fraîches cuites dans une sauce au vin blanc et à l'ail, servies avec une portion de frites croustillantes. Ne manquez pas cette offre à durée limitée !
+					Le menu nouveauté est notre sélection hebdomadaire de plats spéciaux. Chaque semaine, nous proposons de nouvelles créations culinaires qui mettent en valeur les ingrédients de saison et les tendances gastronomiques actuelles.
 				</p>
 
 				<div class="mt-8">
-					<Button color="red" url={phone.href}>Réserver</Button>
+					<Button color="red" url="/menu#menu-nouveaute">Voir le menu</Button>
+				</div>
+			</div>
+			<div slot="hero-content-left">
+				<Picture
+					class:list={"mx-auto"}
+					src={InterieurImage}
+					height={600}
+					formats={["avif", "webp"]}
+					alt="A description of my image."
+				/>
+			</div>
+		</Hero>
+	</Section>
+
+	<Section class:list={"bg-white"}>
+		<Hero>
+			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
+				<Badge color="red" title="régional" />
+				<h2 class="font-black h2 !my-4">Le Chateaumeillant</h2>
+
+				<span class="text-brand-red text-2xl font-bold italic">
+					Un menu gastronomique traditionnel
+				</span>
+
+				<p>
+					Le Chateaumeillant est un menu gastronomique qui met en avant les plats traditionnels de la région. Il comprend une sélection de viandes, de poissons et de légumes locaux, préparés avec soin pour offrir une expérience culinaire authentique.
+				</p>
+
+				<div class="mt-8">
+					<Button color="red" url="/menu#le-chateaumeillant">Voir le menu</Button>
 				</div>
 			</div>
 			<div slot="hero-content-right">
+				<Picture
+					class:list={"mx-auto"}
+					src={InterieurImage}
+					height={600}
+					formats={["avif", "webp"]}
+					alt="A description of my image."
+				/>
+			</div>
+		</Hero>
+	</Section>
+
+	<Section class:list={"bg-white"}>
+		<Hero>
+			<div slot="hero-content-right" class="prose max-w-none max-lg:order-1">
+				<Badge color="red" title="gastronomique" />
+				<h2 class="font-black h2 !my-4">La Goutte Noire</h2>
+
+				<span class="text-brand-red text-2xl font-bold italic">
+					Notre menu signature
+				</span>
+
+				<p>
+					La Goutte Noire est notre menu signature, qui propose une sélection de plats raffinés et créatifs. Ce menu est parfait pour les occasions spéciales et les dîners romantiques, avec des plats qui raviront vos papilles.
+				</p>
+
+				<div class="mt-8">
+					<Button color="red" url="/menu#la-goutte-noire">Voir le menu</Button>
+				</div>
+			</div>
+			<div slot="hero-content-left">
 				<Picture
 					class:list={"mx-auto"}
 					src={InterieurImage}
@@ -229,39 +222,6 @@ import { phone, siteSlogan } from "@/data/config";
 		</svg>
 	</Section>
 
-	<!-- Desserts -->
-	<Section class:list={"bg-white"}>
-		<Hero>
-			<div slot="hero-content-left" class="prose max-w-none order-2">
-				<Badge title="dolce" />
-				<h2 slot="heading-title" class="font-black text-brand-green h2 !my-4">Desserts</h2>
-				<div slot="heading-content">
-					<p>
-						Délectez-vous de notre sélection de douceurs, du tiramisu classique au gâteau au chocolat décadent. Nos desserts sont la façon parfaite de terminer votre repas en beauté.
-					</p>
-
-					<p>
-						Découvrez le goût de l'Italie avec nos plats authentiques préparés à partir des meilleurs ingrédients. Savourez notre grande variété de pizzas, de pâtes et de desserts, tous élaborés avec amour et tradition. Que vous dîniez sur place ou emportiez votre repas, nous vous promettons une expérience culinaire mémorable.
-					</p>
-
-					<div class="mt-8">
-						<Button url="/menu">Voir notre menu</Button>
-					</div>
-				</div>
-			</div>
-
-			<div slot="hero-content-right">
-				<Picture
-					class:list={"mx-auto"}
-					src={InterieurImage}
-					height={600}
-					formats={["avif", "webp"]}
-					alt="A description of my image."
-				/>
-			</div>
-		</Hero>
-	</Section>
-
 	<!-- Contact -->
 	<Section class:list={"bg-white"}>
 		<Hero>
@@ -284,13 +244,7 @@ import { phone, siteSlogan } from "@/data/config";
 			</div>
 
 			<div slot="hero-content-right">
-				<Picture
-					class:list={"mx-auto"}
-					src={InterieurImage}
-					height={600}
-					formats={["avif", "webp"]}
-					alt="A description of my image."
-				/>
+				<iframe class="w-full" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2743.311652341073!2d2.1919017!3d46.561302!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fa41befe3289b5%3A0x96f82e4d10618d0b!2sLa%20Goutte%20Noire!5e0!3m2!1sfr!2sfr!4v1752405101543!5m2!1sfr!2sfr" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
 		</Hero>
 	</Section>
