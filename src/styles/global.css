@@ -314,6 +314,18 @@ label {
 	src: url("/fonts/inter/inter-v18-latin-900italic.woff2") format("woff2");
 }
 
+@font-face {
+	font-display: swap;
+	font-family: "Gracia"; 
+	font-style: normal;
+	font-weight: 700;
+	src: url("/fonts/GraciaASW03-No55/GraciaASW03-No55.woff") format("woff2");
+}
+
+.font-gracia {
+	font-family: "Gracia", cursive; 
+}
+
 .loader {
 	width: 1rem;
 	height: 1rem;
