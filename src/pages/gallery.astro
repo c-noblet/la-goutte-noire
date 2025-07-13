@@ -3,9 +3,11 @@ import Layout from "@/layouts/Layout.astro";
 import Section from "@/components/Section.astro";
 import Heading from "@/components/Heading.astro";
 import { Picture } from "astro:assets";
-import { getCollection } from "astro:content";
 
-const gallery = await getCollection("gallery");
+// Dynamically import all images in the gallery folder
+const images = Object.values(
+  import.meta.glob("../assets/images/*.{jpg,jpeg,png,webp}", { eager: true })
+) as { default: string }[];
 ---
 
 <Layout>
@@ -18,21 +20,24 @@ const gallery = await getCollection("gallery");
 		</Heading>
 	</Section>
 	<div class="masonry-grid grid grid-cols-2 lg:grid-cols-3 pb-16 lg:pb-32">
-		{
-			gallery.map((item, index) => (
-				<div class="masonry-grid-item">
-					<a href={item.data.image.src} class="glightbox">
-						<Picture
-							src={item.data.image}
-							alt={item.data.alt}
-							class="h-full w-full object-cover object-center"
-							loading={index < 3 ? "eager" : "lazy"}
-							fetchpriority={index < 3 ? "high" : "auto"}
-						/>
-					</a>
-				</div>
-			))
-		}
+{
+  images.map((img, index) => (
+	<div class="masonry-grid-item">
+	  <a href={img.default} class="glightbox">
+		<Picture
+		  src={img.default}
+		  width={600}
+		  height={400}
+		  formats={["avif", "webp"]}
+		  alt={`Image ${index + 1} de la galerie`}
+		  class="h-full w-full object-cover object-center"
+		  loading={index < 3 ? "eager" : "lazy"}
+		  fetchpriority={index < 3 ? "high" : "auto"}
+		/>
+	  </a>
+	</div>
+  ))
+}
 	</div>
 </Layout>
 

@@ -12,7 +12,7 @@ const siteLangFormat = siteLang.replace("_", "-");
 			<ul id="plate-nav" class="px-2.5 py-3 swiper-wrapper">
 				{
 					plates.map((plate) => (
-						<li class="swiper-slide inline-block !w-auto last:mr-5">
+						<li class="swiper-slide inline-block !w-auto">
 							<a
 								href={`#${plate.data.slug}`}
 								class="rounded-full px-2 py-1 transition font-medium select-none"
@@ -42,7 +42,7 @@ const siteLangFormat = siteLang.replace("_", "-");
 						{plate.data.plates.map((item) => (
 							<div>
 								<dt>
-									<div class="flex justify-between items-center">
+									<div class="flex justify-between items-center gap-8">
 										<span class="font-bold text-2xl tracking-wide">{item.name}</span>
 										<span class="font-medium text-lg">
 											{new Intl.NumberFormat(siteLangFormat, {

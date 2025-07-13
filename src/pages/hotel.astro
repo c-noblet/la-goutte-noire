@@ -10,18 +10,10 @@ import Article from "@/components/Article.astro";
 import WideImage from "@/components/WideImage.astro";
 
 // Images
-import ExterieurImage from "@/assets/images/exterieur.jpeg";
-import Exterieur2Image from "@/assets/images/exterieur-2.jpeg";
-import Exterieur3Image from "@/assets/images/vue-de-face.jpg";
-import Exterieur4Image from "@/assets/images/vue-d-ensemble.jpg";
-import InterieurImage from "@/assets/images/interieur.jpeg";
-import VerandaImage from "@/assets/images/veranda.jpg";
+import ToitImage from "@/assets/images/hotel-restaurant-la-goutte.jpg";
 import ReceptionImage from "@/assets/images/reception-hotel-et-restaurant.jpg"
-import Reception2Image from "@/assets/images/reception-hotel-et-restaurant-2.jpg";
-import PetitDejImage from "@/assets/images/salle-de-petit-dejeuner.jpg";
-import SalleJauneImage from "@/assets/images/salle-jaune-16-couverts.jpg";
-import TerrasseImage from "@/assets/images/terrasse-et-jardiniere.jpg";
-import ChambreImage from "@/assets/images/chambre.png";
+import PetitDejImage from "@/assets/images/hotel-restaurant-la-goutte-dej.jpg";
+import ChambreImage from "@/assets/images/chambre-un-lit-deux-personnes.jpg";
 import { phone } from "@/data/config";
 ---
 
@@ -30,7 +22,7 @@ import { phone } from "@/data/config";
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
 				<Badge title="Confort et élégance" />
-				<h1 class="font-black">Un hôtel de charme pour un séjour inoubliable</h1>
+				<h1 class="font-black">Bienvenue à l'Hôtel La Goutte Noire</h1>
 
 				<p>
 					Profitez de nos chambres confortables et élégantes, idéalement situées pour découvrir la région. Notre hôtel vous offre un environnement paisible et des services personnalisés pour rendre votre séjour mémorable.
@@ -46,7 +38,7 @@ import { phone } from "@/data/config";
 			<div slot="hero-content-right">
 				<Picture
 					class:list={"mx-auto rounded-xl"}
-					src={ChambreImage}
+					src={ToitImage}
 					height={600}
 					formats={["avif", "webp"]}
 					alt="Intérieur de notre hôtel"
@@ -57,43 +49,100 @@ import { phone } from "@/data/config";
 		</Hero>
 	</Section>
 
-	<WideImage image={PetitDejImage} alt="Vue extérieure de l'hôtel" class:list={"aspect-video lg:aspect-[16/6]"} />
+		<Section class:list={"bg-white"}>
+		<Hero>
+			<div slot="hero-content-right" class="prose max-w-none max-lg:order-1">
+				<Badge color="red" title="Gastronomique" />
+				<h2 class="font-black h2 !my-4">Nos Chambres</h2>
+
+				<span class="text-brand-red text-2xl font-bold italic">
+					Chambres confortables et élégantes
+				</span>
+
+				<p>
+					Nos chambres sont conçues pour votre confort, avec des lits douillets, une décoration soignée et toutes les commodités nécessaires pour un séjour agréable. Que vous soyez en voyage d'affaires ou en vacances, vous trouverez ici un espace relaxant.
+				</p>
+
+				<div class="mt-8">
+					<Button color="red" url="/menu#la-goutte-noire">Voir le menu</Button>
+				</div>
+			</div>
+			<div slot="hero-content-left">
+				<Picture
+					class:list={"mx-auto rounded-xl"}
+					src={ChambreImage}
+					height={600}
+					formats={["avif", "webp"]}
+					alt="A description of my image."
+				/>
+			</div>
+		</Hero>
+	</Section>
 
 	<Section class:list={'bg-white'}>
 		<Article>
-			<h2>Bienvenue à l'Hôtel La Goutte Noire</h2>
+			<h2>
+				Un hôtel de charme pour un séjour inoubliable
+			</h2>
+
 			<p>
 				Niché dans un cadre enchanteur, <strong>l'Hôtel La Goutte Noire</strong> vous propose une expérience unique alliant confort moderne et charme traditionnel. Notre établissement offre un havre de paix pour les voyageurs en quête d'authenticité.
 			</p>
+		</Article>
+	</Section>
 
-			<h3>Nos Chambres</h3>
-			<p>
-				Chacune de nos chambres est décorée avec soin, alliant élégance et confort. Que vous choisissiez une chambre standard, supérieure ou notre suite, vous bénéficierez d'équipements modernes et d'une atmosphère chaleureuse propice à la détente.
-			</p>
-
-			<h3>Services et Commodités</h3>
-			<ul>
-				<li><strong>Petit-déjeuner gastronomique</strong> préparé avec des produits locaux</li>
-				<li><strong>Wi-Fi gratuit</strong> dans tout l'établissement</li>
-				<li><strong>Parking privé</strong> sécurisé</li>
-				<li><strong>Service de chambre</strong> disponible</li>
-				<li><strong>Réception ouverte 24h/24</strong> pour répondre à tous vos besoins</li>
-			</ul>
-
-			<h3>Situation Idéale</h3>
-			<p>
-				Idéalement situé, notre hôtel vous permet d'accéder facilement aux attractions touristiques de la région, tout en vous offrant un refuge paisible après vos journées d'exploration. Notre équipe se fera un plaisir de vous conseiller sur les meilleures activités et visites à faire dans les environs.
-			</p>
-
-			<h3>Restaurant Intégré</h3>
+	<WideImage image={PetitDejImage} alt="Vue extérieure de l'hôtel" class:list={"aspect-video lg:aspect-[16/6]"} />
+	
+	<Section class:list={'bg-white'}>
+		<Article>
+			<h2>Restaurant Intégré</h2>
 			<p>
 				Profitez de notre restaurant pour déguster une cuisine traditionnelle et gastronomique. Nos chefs passionnés vous proposent des plats savoureux préparés avec des ingrédients frais et de saison. Une expérience culinaire qui complète parfaitement votre séjour.
 			</p>
+		</Article>
+	</Section>
 
-			<h3>Réservez dès maintenant</h3>
+	<Section class:list={"bg-white"}>
+		<Hero>
+			<div slot="hero-content-right" class="prose max-w-none max-lg:order-1">
+				<Badge color="red" title="Gastronomique" />
+				<h2 class="font-black h2 !my-4">Services et Commodités</h2>
+
+				<span class="text-brand-red text-2xl font-bold italic">
+					Notre menu signature
+				</span>
+
+				<ul>
+					<li><strong>Petit-déjeuner gastronomique</strong> préparé avec des produits locaux</li>
+					<li><strong>Wi-Fi gratuit</strong> dans tout l'établissement</li>
+					<li><strong>Parking privé</strong> sécurisé</li>
+					<li><strong>Service de chambre</strong> disponible</li>
+					<li><strong>Réception ouverte 24h/24</strong> pour répondre à tous vos besoins</li>
+				</ul>
+			</div>
+			<div slot="hero-content-left">
+				<Picture
+					class:list={"mx-auto rounded-xl"}
+					src={ReceptionImage}
+					height={600}
+					formats={["avif", "webp"]}
+					alt="A description of my image."
+				/>
+			</div>
+		</Hero>
+	</Section>
+
+	<Section class:list={'bg-white'}>
+		<Article>
+			<h2>Réservez dès maintenant</h2>
 			<p>
 				Pour garantir votre séjour à l'Hôtel La Goutte Noire, nous vous invitons à réserver à l'avance. Notre équipe est à votre disposition pour répondre à toutes vos questions et vous aider à planifier un séjour inoubliable.
 			</p>
+
+			<div class="mt-8">
+				<Button color="red" url="/book">Réserver une chambre</Button>
+			</div>
 		</Article>
 	</Section>
+
 </Layout>

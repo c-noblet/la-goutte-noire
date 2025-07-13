@@ -9,7 +9,7 @@ import ButtonCallUs from "@/components/ButtonCallUs.astro";
 import Article from "@/components/Article.astro";
 
 // Images
-import HeroImage from "@/assets/images/interieur.jpeg";
+import HeroImage from "@/assets/images/vue-de-face.jpg";
 import { phone } from "@/data/config";
 ---
 
@@ -47,13 +47,40 @@ import { phone } from "@/data/config";
 
 	<Section class:list={'bg-white'}>
 		<Article>
-			<h2>Bienvenue à La Goutte Noire</h2>
-			<p>
-				Après une aventure de 14 ans en forêt de Tronçais dans un autre restaurant, nous avons eu un coup de cœur à Châteaumeillant dans cet établissement qui se nommait à l'époque "ORESTOBERKO" et que nous avons rebaptisé "La Goutte Noire". Et le 5 juin 2012, l'aventure commençait. Après une fermeture de plus de trois ans, il fallait refaire une clientèle, ce que nous avons réussi à faire rapidement. Depuis, notre clientèle s'est bien diversifiée, aussi bien locale, régionale et plus loin encore. 8 ans de bonheur qui nous ont permis de placer notre établissement sur un bon créneau gastronomique GaultMillau et Michelin.
+			<h2 class="text-2xl font-bold mb-4">Bienvenue à La Goutte Noire</h2>
+			<p class="mb-4">
+				Après une aventure de <strong>14 ans en forêt de Tronçais</strong> dans un autre restaurant, nous avons eu un coup de cœur à Châteaumeillant dans cet établissement qui se nommait à l'époque <em>"ORESTOBERKO"</em> et que nous avons rebaptisé <strong>"La Goutte Noire"</strong>. Et le <span class="font-semibold">5 juin 2012</span>, l'aventure commençait. Après une fermeture de plus de trois ans, il fallait refaire une clientèle, ce que nous avons réussi à faire rapidement. Depuis, notre clientèle s'est bien diversifiée, aussi bien locale, régionale et plus loin encore. <span class="text-brand-green font-semibold">8 ans de bonheur</span> qui nous ont permis de placer notre établissement sur un bon créneau gastronomique <strong>GaultMillau</strong> et <strong>Michelin</strong>.
 			</p>
-			<p>
-				Venez découvrir ou redécouvrir La Goutte Noire, Hôtel, Restaurant, Traiteur.
+			<p class="mb-4">
+				<strong>Venez découvrir ou redécouvrir La Goutte Noire</strong>, Hôtel, Restaurant, Traiteur.
 			</p>
+			<p class="mb-4">
+				Nommé d'après le ruisseau qui traverse le village, ce restaurant possède de nombreux atouts. Vous y trouverez une grande véranda lumineuse, une cuisine qui met à l'honneur le terroir local avec goût et générosité (<strong>vins et fromages régionaux</strong>), ainsi qu'un personnel courtois. Chambres confortables à l'étage.
+			</p>
+			<ul class="list-disc pl-6 mb-4">
+				<li>Tous les invités adorent la merveilleuse cuisine française de ce restaurant.</li>
+				<li>Vous pouvez toujours apprécier des salades délectables, c'est une offre spéciale de La Goutte Noire.</li>
+				<li>Commandez un parfait savoureux.</li>
+				<li>Un vin délicieux rendra votre repas plus savoureux et vous fera surement revenir.</li>
+				<li>Essayez un café immense ici.</li>
+			</ul>
+			<p class="mb-4">
+				Choisissez une table à l'intérieur ou à l'extérieur. Imaginez la combinaison d'un plat délicieux avec un personnel plaisant, c'est exactement ce que ce lieu vous offre. Un service professionnel est toujours un plaisir. C'est une bonne nouvelle pour les clients que cet endroit propose un prix moyen. Vous apprécierez un décor moderne et une ambiance douillete à ce restaurant. <strong>La Goutte Noire est dans le guide Michelin</strong> et a obtenu <span class="font-semibold">2 "couverts noirs"</span> : les experts soulignent son très bon confort.
+			</p>
+			<p class="mb-4">
+				Niché dans une ambiance qui évoque les années 70-80, La Goutte Noire ne laisse pas indifférent. Bien que le cadre et l'atmosphère puissent susciter un sentiment de déception, la qualité de la cuisine demeure indéniable. Avec un menu varié, incluant des options comme le foie gras et un impressionnant chariot de fromages, chaque plat est soigneusement préparé et présenté. Le service, souvent salué pour son efficacité et sa convivialité, ajoute à l'expérience. Globalement, même si l'ambiance peut ne pas convenir à tous, la qualité des repas et la bonne valeur en font une adresse à considérer lors de votre passage dans la région.
+			</p>
+			<hr class="my-6" />
+			<h3 class="text-xl font-semibold mb-2">Hôtel - Restaurant - Traiteur La Goutte Noire</h3>
+			<p class="mb-4">
+				Installé dans un édifice historique avec jardin, cet hôtel de style décontracté se trouve à proximité d'une pittoresque rue de village. Il est situé à <strong>9 km du centre de la Presse</strong>, un musée, et à <strong>27 km de l'autoroute A71</strong>.
+			</p>
+			<ul class="list-disc pl-6 mb-4">
+				<li>Les 7 chambres de style décontracté sont équipées d'une télévision.</li>
+				<li>Un accès Wi-Fi est proposé.</li>
+				<li>L'établissement possède un restaurant confortable de style champêtre doté d'une cheminée.</li>
+				<li>Il comporte aussi un bar, ainsi qu'une terrasse en plein air avec tables ombragées et jardin.</li>
+			</ul>
 		</Article>
 	</Section>
 </Layout>
