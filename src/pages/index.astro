@@ -24,7 +24,12 @@ import PetitDejImage from "@/assets/images/salle-de-petit-dejeuner.jpg";
 import SalleJauneImage from "@/assets/images/salle-jaune-16-couverts.jpg";
 import TerrasseImage from "@/assets/images/terrasse-et-jardiniere.jpg";
 import AccompagnementImage from "@/assets/images/accompagnements-aperitifs.jpg";
+import ChambreImage from "@/assets/images/hotel-restaurant-la-goutte-chambre.jpg";
+import PlatImage from "@/assets/images/la-goutte-noire.jpg";
+import BuffetImage from "@/assets/images/desserts-de-mariage-sur.jpg";
 import { phone, siteSlogan } from "@/data/config";
+import { Coffee, Mail, MapPin, Phone, Utensils } from "@lucide/astro";
+import { Check } from "lucide-react";
 ---
 
 <Layout title="Accueil" pageTitle="Accueil" description="Bienvenue dans notre restaurant !">
@@ -32,11 +37,20 @@ import { phone, siteSlogan } from "@/data/config";
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
 				<Badge title="Chrystèle &amp; Christophe Boudeau" />
-				<h1 class="font-black">Cuisine traditionnelle et gastronomique</h1>
+				<h1 class="font-black">Bienvenue à la Goutte Noire</h1>
 
-				<p>{siteSlogan}</p>
+				<p>
+					Au cœur de Châteaumeillant, La Goutte Noire vous ouvre ses portes dans une ambiance conviviale et authentique. Hôtel, restaurant et traiteur familial, notre maison vous propose une cuisine généreuse et raffinée, inspirée des produits du terroir et de la passion du chef Christophe Boudeau. Que ce soit pour un repas en tête-à-tête, un séjour au calme ou un événement à célébrer, nous vous accueillons avec le souci du détail et l’amour du métier.
+				</p>
 
-				<span class="text-brand-green font-medium">✔ Plats à emporter</span>
+				<div class="flex gap-4 flex-wrap max-w-[80%]">
+					<span class="inline-flex gap-2 text-brand-green font-medium whitespace-nowrap"><Check size={28} /> Service à table</span>
+					<span class="inline-flex gap-2 text-brand-green font-medium whitespace-nowrap"><Check size={28} /> Plats à emporter</span>
+					<span class="inline-flex gap-2 text-brand-green font-medium whitespace-nowrap"><Check size={28} /> Traiteur</span>
+					<span class="inline-flex gap-2 text-brand-green font-medium whitespace-nowrap"><Coffee size={28} /> Petit déjeuner</span>
+					<span class="inline-flex gap-2 text-brand-green font-medium whitespace-nowrap"><Utensils size={28} /> Déjeuner</span>
+					<span class="inline-flex gap-2 text-brand-green font-medium whitespace-nowrap"><Utensils size={28} /> Diner</span>
+				</div>
 
 				<div class="mt-8 flex items-center gap-x-8">
 					<Button url={phone.href}>Réserver</Button>
@@ -53,6 +67,10 @@ import { phone, siteSlogan } from "@/data/config";
 					loading={"eager"}
 					fetchpriority={"high"}
 				/>
+				<div class="mt-4 inline-flex items-center gap-2">
+					<MapPin class="text-brand-red" size={32} />
+					<address>21 rue du Château, 18370 Châteaumeillant, France</address>
+				</div>
 			</div>
 		</Hero>
 	</Section>
@@ -62,25 +80,34 @@ import { phone, siteSlogan } from "@/data/config";
 	<Section class:list={"bg-white"}>
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
-				<Badge color="red" title="Rapide" />
-				<h2 class="font-black h2 !my-4">Formule Express</h2>
+				<Badge color="red" title="Confort" />
+				<h2 class="font-black h2 !my-4">L'Hôtel</h2>
 
 				<span class="text-brand-red text-2xl font-bold italic">
-					Un repas rapide en moins de 30 minutes
+					Un séjour confortable au cœur du Berry
 				</span>
 
 				<p>
-					La formule express est idéale pour les repas rapides. Elle comprend une entrée, un plat principal et un dessert, le tout servi en moins de 30 minutes. Parfait pour les pauses déjeuner ou les dîners rapides.
+					Pour une étape paisible ou un séjour au vert, La Goutte Noire vous propose 7 chambres confortables et accueillantes, dont des chambres familiales. Chaque chambre est équipée de tout le nécessaire pour votre confort : salle de bains privative, télévision, wifi, et literie de qualité. Le petit déjeuner, servi en salle ou en terrasse aux beaux jours, complète ce moment de détente au cœur du Berry.
 				</p>
 
+				<div class="flex gap-4 flex-wrap max-w-[80%]">
+					<span class="inline-flex gap-2 text-brand-green font-medium whitespace-nowrap"><Check size={28} /> Petit-déjeuner</span>
+					<span class="inline-flex gap-2 text-brand-green font-medium whitespace-nowrap"><Check size={28} /> WIFI</span>
+					<span class="inline-flex gap-2 text-brand-green font-medium whitespace-nowrap"><Check size={28} /> Parking privé</span>
+					<span class="inline-flex gap-2 text-brand-green font-medium whitespace-nowrap"><Check size={28} /> Animaux accepté</span>
+					<span class="inline-flex gap-2 text-brand-green font-medium whitespace-nowrap"><Check size={28} /> Service de chambre</span>
+					<span class="inline-flex gap-2 text-brand-green font-medium whitespace-nowrap"><Check size={28} /> Reception ouverte 24h/24</span>
+				</div>
+
 				<div class="mt-8">
-					<Button color="red" url="/menu#formule-express">Voir le menu</Button>
+					<Button color="red" url="/hotel">Voir plus</Button>
 				</div>
 			</div>
 			<div slot="hero-content-right">
 				<Picture
 					class:list={"mx-auto rounded-xl"}
-					src={InterieurImage}
+					src={ChambreImage}
 					height={600}
 					formats={["avif", "webp"]}
 					alt="A description of my image."
@@ -92,25 +119,31 @@ import { phone, siteSlogan } from "@/data/config";
 	<Section class:list={"bg-white"}>
 		<Hero>
 			<div slot="hero-content-right" class="prose max-w-none max-lg:order-1">
-				<Badge color="red" title="Nouveauté" />
-				<h2 class="font-black h2 !my-4">Le menu Nouveauté</h2>
+				<Badge color="red" title="Gastronomie" />
+				<h2 class="font-black h2 !my-4">Le Restaurant</h2>
 
 				<span class="text-brand-red text-2xl font-bold italic">
-					Une sélection hebdomadaire de plats spéciaux
+					Une cuisine de saison, raffinée et généreuse
 				</span>
 
 				<p>
-					Le menu nouveauté est notre sélection hebdomadaire de plats spéciaux. Chaque semaine, nous proposons de nouvelles créations culinaires qui mettent en valeur les ingrédients de saison et les tendances gastronomiques actuelles.
+					Dans une ambiance chaleureuse et soignée, Chrystèle et Christophe Boudeau vous proposent une cuisine de saison, raffinée et généreuse, inspirée des produits du terroir. Trois menus vous sont proposés, alliant tradition et créativité, pour satisfaire toutes les envies. Que ce soit pour un déjeuner en semaine ou un dîner plus festif, chaque assiette est pensée avec passion et précision.
 				</p>
 
+				<div class="flex gap-4 flex-wrap max-w-[80%]">
+					<span class="inline-flex gap-2 text-brand-green font-medium whitespace-nowrap"><Check size={28} /> Prix moyen : 56€</span>
+					<span class="inline-flex gap-2 text-brand-green font-medium whitespace-nowrap"><Check size={28} /> Cuisine française</span>
+					<span class="inline-flex gap-2 text-brand-green font-medium whitespace-nowrap"><Check size={28} /> Animaux accepté</span>
+				</div>
+
 				<div class="mt-8">
-					<Button color="red" url="/menu#menu-nouveaute">Voir le menu</Button>
+					<Button color="red" url="/menu">Voir le menu</Button>
 				</div>
 			</div>
 			<div slot="hero-content-left">
 				<Picture
 					class:list={"mx-auto rounded-xl"}
-					src={InterieurImage}
+					src={PlatImage}
 					height={600}
 					formats={["avif", "webp"]}
 					alt="A description of my image."
@@ -122,55 +155,31 @@ import { phone, siteSlogan } from "@/data/config";
 	<Section class:list={"bg-white"}>
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
-				<Badge color="red" title="Régional" />
-				<h2 class="font-black h2 !my-4">Le Chateaumeillant</h2>
+				<Badge color="red" title="Traiteur" />
+				<h2 class="font-black h2 !my-4">Service traiteur</h2>
 
 				<span class="text-brand-red text-2xl font-bold italic">
-					Un menu gastronomique traditionnel
+					Des prestations sur mesure pour vos événements
 				</span>
 
 				<p>
-					Le Chateaumeillant est un menu gastronomique qui met en avant les plats traditionnels de la région. Il comprend une sélection de viandes, de poissons et de légumes locaux, préparés avec soin pour offrir une expérience culinaire authentique.
+					Pour vos réceptions, mariages, événements familiaux ou professionnels, La Goutte Noire propose un service traiteur sur mesure. Chrystèle et Christophe Boudeau mettent leur savoir-faire à votre service avec une cuisine maison, soignée et généreuse. Buffet, repas à l’assiette, cocktails dînatoires ou plateaux repas : chaque prestation est adaptée à vos envies, avec la même exigence de qualité que dans notre restaurant.
 				</p>
 
+				<div class="flex gap-4 flex-wrap max-w-[80%]">
+					<span class="inline-flex gap-2 text-brand-green font-medium whitespace-nowrap"><Check size={28} /> Menu personnalisé</span>
+					<span class="inline-flex gap-2 text-brand-green font-medium whitespace-nowrap"><Check size={28} /> Dégustaion prélable</span>
+					<span class="inline-flex gap-2 text-brand-green font-medium whitespace-nowrap"><Check size={28} /> Service</span>
+				</div>
+
 				<div class="mt-8">
-					<Button color="red" url="/menu#le-chateaumeillant">Voir le menu</Button>
+					<Button color="red" url="/catering">En savoir plus</Button>
 				</div>
 			</div>
 			<div slot="hero-content-right">
 				<Picture
 					class:list={"mx-auto rounded-xl"}
-					src={InterieurImage}
-					height={600}
-					formats={["avif", "webp"]}
-					alt="A description of my image."
-				/>
-			</div>
-		</Hero>
-	</Section>
-
-	<Section class:list={"bg-white"}>
-		<Hero>
-			<div slot="hero-content-right" class="prose max-w-none max-lg:order-1">
-				<Badge color="red" title="Gastronomique" />
-				<h2 class="font-black h2 !my-4">La Goutte Noire</h2>
-
-				<span class="text-brand-red text-2xl font-bold italic">
-					Notre menu signature
-				</span>
-
-				<p>
-					La Goutte Noire est notre menu signature, qui propose une sélection de plats raffinés et créatifs. Ce menu est parfait pour les occasions spéciales et les dîners romantiques, avec des plats qui raviront vos papilles.
-				</p>
-
-				<div class="mt-8">
-					<Button color="red" url="/menu#la-goutte-noire">Voir le menu</Button>
-				</div>
-			</div>
-			<div slot="hero-content-left">
-				<Picture
-					class:list={"mx-auto rounded-xl"}
-					src={InterieurImage}
+					src={BuffetImage}
 					height={600}
 					formats={["avif", "webp"]}
 					alt="A description of my image."
@@ -226,15 +235,17 @@ import { phone, siteSlogan } from "@/data/config";
 		<Hero>
 			<div slot="hero-content-left" class="prose max-w-none">
 				<Badge color="red" title="Contact" />
-				<h2 slot="heading-title" class="font-black text-brand-red h2 !my-4">Passez nous voir et dites bonjour</h2>
+				<h2 slot="heading-title" class="font-black text-brand-red h2 !my-4">Passez nous voir ou contactez nous</h2>
 				<div slot="heading-content">
 					<p>
 						Nous sommes situés au cœur de la ville, à deux pas de la place principale. Notre restaurant est l'endroit idéal pour déguster un délicieux repas entre amis et en famille.
 					</p>
 
-					<span class="text-brand-red font-medium">
-						✔ Nous proposons également des plats à emporter, afin que vous puissiez déguster votre repas à la maison.
-					</span>
+					<div class="flex gap-4 flex-wrap max-w-[80%]">
+						<a href="tel:+33 2 48 96 98 87" class="inline-flex gap-2 text-brand-green font-medium whitespace-nowrap"><Phone size={28} /> 02 48 96 98 87</a>
+						<a href="mailto:lagouttenoire@orange.fr" class="inline-flex gap-2 text-brand-green font-medium whitespace-nowrap"><Mail size={28} /> lagouttenoire@orange.fr</a>
+						<address class="inline-flex gap-2 text-brand-green font-medium whitespace-nowrap"><MapPin size={28} /> 21 rue du Château, 18370 Châteaumeillant, France</address>
+					</div>
 
 					<div class="mt-8">
 						<Button color="red" url="/book">Réserver une table</Button>
