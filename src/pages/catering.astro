@@ -11,10 +11,10 @@ import Grid from "@/components/Grid.astro";
 import Heading from "@/components/Heading.astro";
 
 // Images
-import HeroImage from "@/assets/images/interieur.jpeg";
-import VerandaImage from "@/assets/images/veranda.jpg";
-import ReceptionImage from "@/assets/images/reception-hotel-et-restaurant.jpg"
-import Reception2Image from "@/assets/images/reception-hotel-et-restaurant-2.jpg";
+import HeroImage from "@/assets/images/presentation-de-produits.jpg";
+import ReceptionImage from "@/assets/images/presentation-d-entremets.jpg";
+import TakewayImage from "@/assets/images/la-goutte-noire-2.jpg";
+import HomeImage from "@/assets/images/la-goutte-noire-4.jpg";
 import { phone } from "@/data/config";
 ---
 
@@ -81,7 +81,7 @@ import { phone } from "@/data/config";
 				<div class="flex flex-col items-center prose text-center">
 					<Picture
 						class:list={"not-prose w-full h-auto aspect-video object-cover rounded-xl"}
-						src={VerandaImage}
+						src={HomeImage}
 						formats={["avif", "webp"]}
 						alt="Équipe à domicile"
 					/>
@@ -97,7 +97,7 @@ import { phone } from "@/data/config";
 				<div class="flex flex-col items-center prose text-center">
 					<Picture
 						class:list={"not-prose w-full h-auto aspect-video object-cover rounded-xl"}
-						src={HeroImage}
+						src={TakewayImage}
 						formats={["avif", "webp"]}
 						alt="Plats à emporter"
 					/>
@@ -106,22 +106,6 @@ import { phone } from "@/data/config";
 						Découvrez notre sélection de plats à emporter, prêts à déguster. Des options délicieuses pour vos repas à la maison sans le stress de la cuisine.
 					</p>
 					<Button url="/catering/takeaway" class="mt-4">En savoir plus</Button>
-				</div>
-			</div>
-
-			<div slot="grid-content-4">
-				<div class="flex flex-col items-center prose text-center">
-					<Picture
-						class:list={"not-prose w-full h-auto aspect-video object-cover rounded-xl"}
-						src={Reception2Image}
-						formats={["avif", "webp"]}
-						alt="Nos références"
-					/>
-					<h3 class="h4 mt-0 font-black">Nos références</h3>
-					<p>
-						Consultez nos références pour découvrir nos réalisations en traiteur. Des clients satisfaits témoignent de la qualité de nos services.
-					</p>
-					<Button url="/catering/references" class="mt-4">En savoir plus</Button>
 				</div>
 			</div>
 		</Grid>

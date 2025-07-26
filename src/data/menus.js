@@ -39,12 +39,6 @@ export const menuMain = [
                 url: '/catering/takeaway',
                 highlighted: false
             },
-            {
-                name: 'Nos références',
-                description: 'Consultez nos références pour découvrir nos réalisations en traiteur.',
-                url: '/catering/references',
-                highlighted: false
-            },
         ]
     },
     {

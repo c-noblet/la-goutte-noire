@@ -9,8 +9,10 @@ import ButtonCallUs from "@/components/ButtonCallUs.astro";
 import Article from "@/components/Article.astro";
 
 // Images
-import HeroImage from "@/assets/images/interieur.jpeg";
+import HeroImage from "@/assets/images/la-goutte-noire-4.jpg";
+import CaptionImage from "@/assets/images/accompagnements-aperitifs.jpg";
 import { phone } from "@/data/config";
+import WideImage from "@/components/WideImage.astro";
 ---
 
 <Layout title="Une équipe à domicile" pageTitle="Une équipe à domicile" description="Notre service traiteur à domicile pour vos événements">
@@ -52,50 +54,65 @@ import { phone } from "@/data/config";
 				<strong>La Goutte Noire</strong> vous propose un service traiteur haut de gamme directement chez vous. Notre équipe de professionnels s'occupe de tout, de la préparation au service, en passant par la mise en place et le rangement.
 			</p>
 
-			<h3>Pourquoi choisir notre service à domicile ?</h3>
-			<ul>
-				<li><strong>Confort :</strong> Profitez de votre événement sans quitter votre domicile</li>
-				<li><strong>Personnalisation :</strong> Un service adapté à votre espace et à vos besoins</li>
-				<li><strong>Professionnalisme :</strong> Une équipe expérimentée et discrète</li>
-				<li><strong>Qualité :</strong> Des plats préparés sur place ou livrés prêts à servir</li>
-				<li><strong>Tranquillité d'esprit :</strong> Nous nous occupons de tout, vous n'avez qu'à profiter</li>
-			</ul>
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+				<div>
+					<h3>Pourquoi choisir notre service à domicile ?</h3>
+					<ul>
+						<li><strong>Confort :</strong> Profitez de votre événement sans quitter votre domicile</li>
+						<li><strong>Personnalisation :</strong> Un service adapté à votre espace et à vos besoins</li>
+						<li><strong>Professionnalisme :</strong> Une équipe expérimentée et discrète</li>
+						<li><strong>Qualité :</strong> Des plats préparés sur place ou livrés prêts à servir</li>
+						<li><strong>Tranquillité d'esprit :</strong> Nous nous occupons de tout, vous n'avez qu'à profiter</li>
+					</ul>
+				</div>
+				<div>
+					<h3>Notre équipe</h3>
+					<p>
+						Notre équipe à domicile se compose de :
+					</p>
+					<ul>
+						<li><strong>Chef cuisinier :</strong> Pour la préparation des plats sur place si nécessaire</li>
+						<li><strong>Maître d'hôtel :</strong> Pour coordonner le service et veiller au bon déroulement de votre événement</li>
+						<li><strong>Serveurs/serveuses :</strong> Pour un service attentif et professionnel</li>
+						<li><strong>Personnel de cuisine :</strong> Pour assister le chef et assurer la présentation parfaite des plats</li>
+					</ul>
+				</div>
+			</div>
+		</Article>
+	</Section>
 
-			<h3>Notre équipe</h3>
-			<p>
-				Notre équipe à domicile se compose de :
-			</p>
-			<ul>
-				<li><strong>Chef cuisinier :</strong> Pour la préparation des plats sur place si nécessaire</li>
-				<li><strong>Maître d'hôtel :</strong> Pour coordonner le service et veiller au bon déroulement de votre événement</li>
-				<li><strong>Serveurs/serveuses :</strong> Pour un service attentif et professionnel</li>
-				<li><strong>Personnel de cuisine :</strong> Pour assister le chef et assurer la présentation parfaite des plats</li>
-			</ul>
+	<WideImage image={CaptionImage} alt="Just an image" class:list={"aspect-video lg:aspect-[16/6]"} />
 
-			<h3>Types d'événements</h3>
-			<p>
-				Notre service à domicile est idéal pour tous types d'événements :
-			</p>
-			<ul>
-				<li>Dîners privés</li>
-				<li>Anniversaires</li>
-				<li>Réunions familiales</li>
-				<li>Cocktails d'entreprise</li>
-				<li>Séminaires</li>
-				<li>Lancements de produits</li>
-			</ul>
-
-			<h3>Comment ça marche ?</h3>
-			<ol>
-				<li><strong>Consultation initiale :</strong> Nous discutons de vos besoins et préférences</li>
-				<li><strong>Visite des lieux :</strong> Si nécessaire, nous visitons votre domicile ou lieu d'événement pour évaluer l'espace</li>
-				<li><strong>Proposition personnalisée :</strong> Nous élaborons un menu et une offre de service adaptés</li>
-				<li><strong>Coordination :</strong> Nous planifions tous les détails avec vous</li>
-				<li><strong>Jour J :</strong> Notre équipe arrive en avance pour tout mettre en place</li>
-				<li><strong>Service :</strong> Nous assurons un service impeccable tout au long de votre événement</li>
-				<li><strong>Rangement :</strong> Nous laissons votre espace propre et rangé</li>
-			</ol>
-
+	<Section class:list={'bg-white'}>
+		<Article>
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+				<div>
+					<h3>Comment ça marche ?</h3>
+					<ol>
+						<li><strong>Consultation initiale :</strong> Nous discutons de vos besoins et préférences</li>
+						<li><strong>Visite des lieux :</strong> Si nécessaire, nous visitons votre domicile ou lieu d'événement pour évaluer l'espace</li>
+						<li><strong>Proposition personnalisée :</strong> Nous élaborons un menu et une offre de service adaptés</li>
+						<li><strong>Coordination :</strong> Nous planifions tous les détails avec vous</li>
+						<li><strong>Jour J :</strong> Notre équipe arrive en avance pour tout mettre en place</li>
+						<li><strong>Service :</strong> Nous assurons un service impeccable tout au long de votre événement</li>
+						<li><strong>Rangement :</strong> Nous laissons votre espace propre et rangé</li>
+					</ol>
+				</div>
+				<div>
+					<h3>Types d'événements</h3>
+					<p>
+						Notre service à domicile est idéal pour tous types d'événements :
+					</p>
+					<ul>
+						<li>Dîners privés</li>
+						<li>Anniversaires</li>
+						<li>Réunions familiales</li>
+						<li>Cocktails d'entreprise</li>
+						<li>Séminaires</li>
+						<li>Lancements de produits</li>
+					</ul>
+				</div>
+			</div>
 			<h3>Contactez-nous</h3>
 			<p>
 				Pour plus d'informations sur notre service traiteur à domicile ou pour réserver notre équipe pour votre prochain événement, n'hésitez pas à nous contacter. Nous serons ravis de vous aider à créer un moment mémorable.

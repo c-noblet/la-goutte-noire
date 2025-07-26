@@ -9,10 +9,10 @@ import ButtonCallUs from "@/components/ButtonCallUs.astro";
 import Article from "@/components/Article.astro";
 
 // Images
-import VerandaImage from "@/assets/images/veranda.jpg";
-import ReceptionImage from "@/assets/images/reception-hotel-et-restaurant.jpg"
-import Reception2Image from "@/assets/images/reception-hotel-et-restaurant-2.jpg";
+import ReceptionImage from "@/assets/images/presentation-d-entremets.jpg";
+import PresentationImage from "@/assets/images/presentation-de-produits.jpg";
 import { phone } from "@/data/config";
+import WideImage from "@/components/WideImage.astro";
 ---
 
 <Layout title="Mariage & Réception" pageTitle="Mariage & Réception" description="Services de traiteur pour mariages et réceptions">
@@ -54,49 +54,65 @@ import { phone } from "@/data/config";
 				Chez <strong>La Goutte Noire</strong>, nous comprenons l'importance de votre mariage ou de votre réception. C'est pourquoi nous mettons tout en œuvre pour créer une expérience gastronomique exceptionnelle qui répondra à vos attentes et impressionnera vos invités.
 			</p>
 
-			<h3>Nos prestations</h3>
-			<p>
-				Notre service traiteur pour mariages et réceptions comprend :
-			</p>
-			<ul>
-				<li><strong>Consultation personnalisée :</strong> Nous travaillons avec vous pour comprendre vos préférences et créer un menu sur mesure</li>
-				<li><strong>Dégustation préalable :</strong> Goûtez et approuvez votre menu avant le grand jour</li>
-				<li><strong>Service complet :</strong> Notre équipe professionnelle s'occupe du service, de la mise en place et du rangement</li>
-				<li><strong>Options de boissons :</strong> Du champagne aux cocktails, nous proposons une sélection variée de boissons</li>
-				<li><strong>Gâteau de mariage :</strong> Des créations sur mesure pour couronner votre célébration</li>
-			</ul>
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+				<div>
+					<h3>Nos prestations</h3>
+					<p>
+						Notre service traiteur pour mariages et réceptions comprend :
+					</p>
+					<ul>
+						<li><strong>Consultation personnalisée :</strong> Nous travaillons avec vous pour comprendre vos préférences et créer un menu sur mesure</li>
+						<li><strong>Dégustation préalable :</strong> Goûtez et approuvez votre menu avant le grand jour</li>
+						<li><strong>Service complet :</strong> Notre équipe professionnelle s'occupe du service, de la mise en place et du rangement</li>
+						<li><strong>Options de boissons :</strong> Du champagne aux cocktails, nous proposons une sélection variée de boissons</li>
+						<li><strong>Gâteau de mariage :</strong> Des créations sur mesure pour couronner votre célébration</li>
+					</ul>
+				</div>
+				<div>
+					<h3>Formules adaptées</h3>
+					<p>
+						Nous proposons différentes formules adaptées à vos besoins et à votre budget :
+					</p>
+					<ul>
+						<li><strong>Cocktail dînatoire</strong></li>
+						<li><strong>Buffet</strong></li>
+						<li><strong>Repas assis</strong></li>
+						<li><strong>Brunch du lendemain</strong></li>
+					</ul>
+				</div>
+			</div>
+		</Article>
+	</Section>
 
-			<h3>Formules adaptées</h3>
-			<p>
-				Nous proposons différentes formules adaptées à vos besoins et à votre budget :
-			</p>
-			<ul>
-				<li><strong>Cocktail dînatoire</strong></li>
-				<li><strong>Buffet</strong></li>
-				<li><strong>Repas assis</strong></li>
-				<li><strong>Brunch du lendemain</strong></li>
-			</ul>
+	<WideImage image={PresentationImage} alt="Just an image" class:list={"aspect-video lg:aspect-[16/6]"} />
 
-			<h3>Des menus d'exception</h3>
-			<p>
-				Notre chef élabore des menus d'exception à base de produits frais et de saison. De l'apéritif au dessert, chaque plat est préparé avec soin pour offrir une expérience gustative mémorable à vos invités.
-			</p>
-
-			<h3>Lieux de réception</h3>
-			<p>
-				Nous intervenons dans tous types de lieux :
-			</p>
-			<ul>
-				<li>Salles de réception</li>
-				<li>Domaines et châteaux</li>
-				<li>Jardins et espaces extérieurs</li>
-				<li>Lieux atypiques</li>
-			</ul>
-
+	<Section class:list={'bg-white'}>
+		<Article>
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+				<div>
+					<h3>Des menus d'exception</h3>
+					<p>
+						Notre chef élabore des menus d'exception à base de produits frais et de saison. De l'apéritif au dessert, chaque plat est préparé avec soin pour offrir une expérience gustative mémorable à vos invités.
+					</p>
+				</div>
+				<div>
+					<h3>Lieux de réception</h3>
+					<p>
+						Nous intervenons dans tous types de lieux :
+					</p>
+					<ul>
+						<li>Salles de réception</li>
+						<li>Domaines et châteaux</li>
+						<li>Jardins et espaces extérieurs</li>
+						<li>Lieux atypiques</li>
+					</ul>
+				</div>
+			</div>
 			<h3>Demandez un devis</h3>
 			<p>
 				Pour obtenir un devis personnalisé ou pour plus d'informations sur nos services de traiteur pour mariages et réceptions, n'hésitez pas à nous contacter. Notre équipe se fera un plaisir de vous accompagner dans la préparation de votre événement.
 			</p>
 		</Article>
 	</Section>
+
 </Layout>
